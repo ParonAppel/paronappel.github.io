@@ -1,0 +1,283 @@
+/* Color palette */
+/* crimson sky: #CF6766 */
+ /* slightly darker version of crimson sky: #CA6665 */
+/* indigo: #30415D */
+/* ultramarine: #031424 */
+/* light blue: #8EAEBD */
+/* background gray: #e8e8e8 */
+
+
+/* General stuff */
+body {
+	/* display: flex-grow; */
+	display: flex;
+	width: 100vw;
+	font-family: 'Roboto Mono', monospace; 
+	font-weight:normal;
+	font-size: 25px;
+	background-color: #e8e8e8;
+}
+
+/* Header Content */
+
+header {
+	justify-content: left;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    line-height: 60px;
+	background-color: #CF6766;
+	z-index: 100;
+}
+
+header * {
+	
+    display: inline;
+    height: 50px;
+	text-decoration: none;
+	color: #031424;
+}
+
+header ul {
+	
+     padding: 20px; 
+}
+
+/* Header buttons */
+#menus li a {
+	
+	text-align: center center;
+	padding: 14px 10px 14px 10px; 
+    margin-right: 10px;
+	background-color: #CF6766;
+	border-bottom: 4px solid #e8e8e8; 
+	transition: border-bottom 300ms, background-color 300ms; 
+
+}
+
+
+#menus li a:hover {
+	background-color: #CF6766;
+	border-bottom: 4px solid #031424;
+	transition: border-bottom 300ms, background-color 300ms; 
+
+}
+
+#menus li a.active {
+	background-color: #CF6766;
+	border-bottom: 4px solid #031424;
+	transition: border-bottom 300ms, background-color 300ms; 
+	
+}
+
+/* Position of group of icons */
+#contact {
+	
+	position:relative;
+	left: 75vw;	
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around; 
+	width: 15vw;
+	
+	align-items: center; 
+	text-align: center;
+}
+
+.iconbox {
+	
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	text-align: center;
+	
+	height: 40px;
+	width:	40px;			
+	
+	background-color:#CF6766;
+	border: 3px solid #031424;
+	position: relative;
+	
+	top: -55px;
+	
+	transition: border 200ms, background-color 200ms;
+}
+
+
+.iconbox:hover {
+		
+	background-color:#031424;
+	border: 3px solid #031424;
+	position: relative;
+	
+}
+
+
+.iconImg {
+	
+	position:absolute;
+	
+	right: 12%;
+	bottom: 12%;
+	
+	width: 30px;
+	height: 29px;
+	
+	
+}
+
+
+.iconbox:hover .iconImgHover {
+		
+	opacity: 0;
+}
+
+
+
+/* Other Stuff */
+.aButton {
+	
+	background-color: #CF6766;
+	border-radius: 2px;
+	border: 3px solid #30415D;
+	padding: 8px 18px;
+	font-size: 22px;
+	
+	text-decoration: none;
+	color: #30415D;
+	
+	transition: background-color 100ms, color 100ms;
+}
+
+.aButton:hover {
+	
+	background-color: #30415D;
+	color: #CF6766;
+}
+
+/* Portfolio page specific stuff */
+
+h3 {
+	font-size: 40px;
+	color: #031424;
+	position:relative;
+}
+		
+	
+#choices {
+	display: flex;
+	flex-direction: column;
+	
+}
+		
+.threeColumns {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 120vh;
+	column-count: 3;
+	column-gap: 100px;
+	padding-right: 100px;
+	padding-left: 100px;
+}
+		
+/* .rightSide { */
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* height: 100vh; */
+	/* width: 75%; */
+	/* background-color: white; */
+				
+/* } */
+		
+/* .leftSide { */
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* text-align: center; */
+	/* height: 100vh; */
+	/* padding-right: 80px; */
+	/* padding-left: 80px; */
+	/* background-color: white; */
+	/* border-right: 1px solid grey; */
+	
+/* } */
+				
+.sides{	
+		
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center; 
+	text-align: center;
+	
+	height: 99.99%;
+	width: 99.99%;
+	
+	background-size: auto 100%;
+	background-position: center center; 
+	background-repeat: no-repeat; 			
+	
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 6px solid white;
+	border-radius: 7px;
+	
+	position: static;
+	
+}
+
+.GradientBorders {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: bottom; 
+	align-items: center; 
+	text-align: bottom;
+	
+	
+	height: 80vh;
+	width: 30vw;
+	padding: 20px;
+
+	background-position: center center; 
+	background-repeat: no-repeat; 		
+	background: linear-gradient(to top, #30415D 1%, #CF6766 99%);
+	background-origin: padding-box, border-box;
+	background-repeat: no-repeat; /* this is important */
+	
+	border: 6px solid white;
+	border-radius:9px;	
+	
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.19);
+	position: static;
+}
+
+.sides h3 {
+	
+	position: absolute;
+	top: 500px;
+	
+}
+
+.sides p {
+	
+	width: 20vw;
+	position: absolute;
+	top: 1100px;
+	
+}
+
+.sides .aButton {
+
+	position: relative;
+	top: 100px;
+
+}
