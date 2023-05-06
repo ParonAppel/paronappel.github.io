@@ -201,7 +201,6 @@ header ul {
 	
 	height: 260%;
 	opacity: 1;
-	/* transform: scaleX(1) scaleY(1) rotate(20deg); */
 	
 }
 
@@ -214,11 +213,14 @@ header ul {
 .buttonContainer {
 	position: relative;
 	
+	padding-top: 8px;
+	padding-bottom: 10px;
+	
 	overflow:hidden;
-	padding: 8px 18px;
 	width: auto;
-	height: calc(1++%);
+	height: calc(auto + 30%);
 }
+
 
 /* Sections */
 
@@ -239,8 +241,30 @@ section {
     background-attachment: fixed;
 }
 
+.bigImg {
+	
+	display:block;
+	
+	min-width: 50px;
+	min-height: 50px;
+	
+	width: 500px;
+	height: 500px;
+	
+	max-width: 500px;
+	max-height: 500px;
+
+	object-fit: cover;	
+	overflow: hidden;
+	
+	border-radius: 50%;
+	
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
 
 #top {
+
     display: flex;
 	
 	flex-direction: column;
@@ -248,8 +272,11 @@ section {
 	align-items: center; 
 	text-align: center;
 	
+	margin-top: 60px;
+	
 	height: 90vh;
 	border-bottom: 4px solid #30415D;
+	
 }
 
 h1 {
