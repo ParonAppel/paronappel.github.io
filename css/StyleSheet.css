@@ -44,6 +44,7 @@ header * {
 header ul {
 	
      padding: 20px; 
+	 
 }
 
 /* Header menu buttons */
@@ -105,6 +106,8 @@ header ul {
 	top: -55px;
 	
 	transition: border 200ms, background-color 200ms;
+	
+	overflow:hidden;
 }
 
 
@@ -274,7 +277,7 @@ section {
 	
 	column-gap: 1%;
 	
-	/* margin-top: 60px; */
+	margin-top: 60px;
 	
 	height: 90vh;
 	border-bottom: 4px solid #30415D;
