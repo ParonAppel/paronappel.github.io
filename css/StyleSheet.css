@@ -272,7 +272,9 @@ section {
 	align-items: center; 
 	text-align: center;
 	
-	margin-top: 60px;
+	column-gap: 1%;
+	
+	/* margin-top: 60px; */
 	
 	height: 90vh;
 	border-bottom: 4px solid #30415D;
@@ -282,5 +284,10 @@ section {
 h1 {
 	
 	font-size: 60px;
-	
+	margin: 1vw;
+	margin-top: 4vh;
+}
+
+* {
+	margin: 0px;
 }
