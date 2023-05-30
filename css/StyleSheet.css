@@ -20,6 +20,9 @@
   --background: #E8E8E8;
   
   --header_height: 7vh;
+  
+  --iconbox_size: 2vw;
+  --iconbox_inner_size: 1.55vw;
 }
 
 /* General stuff */
@@ -42,7 +45,7 @@ header {
     left: 0;
     right: 0;
     height: var(--header_height);
-    line-height: 60px;
+    line-height: 8vh;
 	background-color: var(--main);
 	z-index: 100;
 }
@@ -110,14 +113,14 @@ header ul {
 	align-items: center; 
 	text-align: center;
 	
-	height: 40px;
-	width:	40px;			
+	height: var(--iconbox_size);
+	width:	var(--iconbox_size);			
 	
 	background-color:var(--main);
 	border: 3px solid var(--text);
 	position: relative;
 	
-	top: calc(var(--header_height) / -1.1);
+	top: calc(var(--header_height) * -1.14);
 	
 	transition: border 200ms, background-color 200ms;
 	
@@ -141,8 +144,8 @@ header ul {
 	right: 12%;
 	bottom: 12%;
 	
-	width: 30px;
-	height: 29px;
+	width: var(--iconbox_inner_size);
+	height: var(--iconbox_inner_size);
 	
 	
 }
