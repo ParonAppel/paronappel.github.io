@@ -1,11 +1,26 @@
-/* Color palette */
-/* crimson sky: #CF6766 */
- /* slightly darker version of crimson sky: #CA6665 */
-/* indigo: #30415D */
-/* ultramarine: #031424 */
-/* light blue: #8EAEBD */
-/* background gray: #E8E8E8 */
-
+:root {
+	
+  /* Color palette */
+	
+  /* crimson sky */
+  --main: #CF6766;
+  
+  --dark_main: #CA6665;
+  
+  /* indigo */
+  --secondary: #30415D;
+  
+  /* ultramarine */
+  --text: #031424;
+  
+  /* light blue */
+  --highlight: #8EAEBD;
+  
+  /* background gray */
+  --background: #E8E8E8;
+  
+  --header_height: 7vh;
+}
 
 /* General stuff */
 body {
@@ -13,13 +28,12 @@ body {
 	font-family: 'Roboto Mono', monospace; 
 	font-weight:normal;
 	font-size: 25px;
-	background-color: #e8e8e8;
+	background-color: var(--background);
 	top: 0;
     left: 0;
 }
 
 /* Header Content */
-
 header {
 	justify-content: left;
     display: flex;
@@ -27,23 +41,24 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: var(--header_height);
     line-height: 60px;
-	background-color: #CF6766;
+	background-color: var(--main);
 	z-index: 100;
 }
 
 header * {
 	
     display: inline;
-    height: 50px;
+    height: var(--header_height);
 	text-decoration: none;
-	color: #031424;
+	color: var(--text);
 }
 
 header ul {
 	
-     padding: 20px; 
+	margin-left: 7vw;
+    padding: 0px; 
 	 
 }
 
@@ -53,23 +68,22 @@ header ul {
 	text-align: center center;
 	padding: 14px 10px 14px 10px; 
     margin-right: 10px;
-	background-color: #CF6766;
-	border-bottom: 4px solid #e8e8e8; 
+	background-color: var(--main);
+	border-bottom: 4px solid var(--background); 
 	transition: border-bottom 300ms, background-color 300ms; 
 
 }
 
-
 #menus li a:hover {
-	background-color: #CF6766;
+	background-color: var(--main);
 	border-bottom: 4px solid #031424;
 	transition: border-bottom 300ms, background-color 300ms; 
 
 }
 
 #menus li a.active {
-	background-color: #CF6766;
-	border-bottom: 4px solid #031424;
+	background-color: var(--main);
+	border-bottom: 4px solid var(--text);
 	transition: border-bottom 300ms, background-color 300ms; 
 	
 }
@@ -99,11 +113,11 @@ header ul {
 	height: 40px;
 	width:	40px;			
 	
-	background-color:#CF6766;
-	border: 3px solid #031424;
+	background-color:var(--main);
+	border: 3px solid var(--text);
 	position: relative;
 	
-	top: -55px;
+	top: calc(var(--header_height) / -1.1);
 	
 	transition: border 200ms, background-color 200ms;
 	
@@ -113,8 +127,8 @@ header ul {
 
 .iconBox:hover {
 		
-	background-color:#031424;
-	border: 3px solid #031424;
+	background-color:var(--text);
+	border: 3px solid var(--text);
 	position: relative;
 	
 }
@@ -143,14 +157,14 @@ header ul {
 /* Other Stuff */
 .simpleButton {
 	
-	background-color: #CF6766;
+	background-color: var(--main);
 	border-radius: 2px;
-	border: 3px solid #30415D;
+	border: 3px solid var(--secondary);
 	padding: 8px 18px;
 	font-size: 22px;
 	
 	text-decoration: none;
-	color: #30415D;
+	color: var(--secondary);
 	
 	transition: background-color 100ms, color 100ms;
 }
@@ -167,7 +181,7 @@ header ul {
 	
 	background-color: transparent;
 	border-radius: 2px;
-	border: 3px solid #30415D;
+	border: 3px solid var(--secondary);
 	padding: 8px 18px;
 	
 	overflow: hidden;
@@ -190,7 +204,7 @@ header ul {
 	top: 50%;
 	left: 50%;
 	
-	background-color: #30415D;
+	background-color: var(--secondary);
 	z-index: -1;
 	opacity: 0;
 	
@@ -209,7 +223,7 @@ header ul {
 
 .fancyButton:hover {
 	overflow: hidden;
-	color: #E8E8E8;
+	color: var(--background);
 }
 
 
@@ -231,7 +245,7 @@ section {
 	
     height: 100vh;
 	width: 98.5vw;
-    border-bottom: 4px solid #30415D;
+    border-bottom: 4px solid var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,7 +294,7 @@ section {
 	margin-top: 60px;
 	
 	height: 90vh;
-	border-bottom: 4px solid #30415D;
+	border-bottom: 4px solid var(--secondary);
 	
 }
 
