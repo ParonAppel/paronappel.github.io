@@ -32,7 +32,7 @@ body {
 	display: flex;
 	font-family: 'Roboto Mono', monospace; 
 	font-weight:normal;
-	font-size: calc(var(--header_height) /2.5);
+	font-size: calc(4vw / 3);
 	background-color: var(--background);
 	top: 0;
     left: 0;
