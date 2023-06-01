@@ -4,10 +4,10 @@
 	<title>Isabella Norström</title>
 	<meta charset=utf-8>
 	<link rel="stylesheet" href="css\StyleSheet.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 	<style>
 	
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
-		
 	
 	</style>
 </head>
@@ -63,7 +63,7 @@
 				<img src="css\pictures\bigbackgroundpixel.png" class="bigImg" alt="Pixel Art">
 				
 				<h1>Isabella Norström</h1>
-				<p style="margin: 0.5vh; margin-bottom: 3vh;"> Game programming student at PSQ </p>
+				<p style="margin: 0.5vh; margin-bottom: 3vh;"> Aspiring UI programmer @ PSQ </p>
 					
 				<div class="buttonContainer">
 					<a class="fancyButton" href="About.html" > About Me </a>
@@ -71,16 +71,25 @@
 		</section>
 		
 		<section id="mywork">
-			<h2> About Blåhaj </h2>
+			<h2> Game Projects </h2>
 			<p> Press the button bellow to find out more about Blåhajar </p>
 			<p><a class="simpleButton" href="about.html">CLICK HERE</a></p>  
 		</section>
 		
-		<!-- <section id="survey"> -->
-            <!-- <h2> Blåhaj survey </h2> -->
-			<!-- <p> Want to participate in a quick survey? </p> -->
-			<!-- <p> Click the button bellow! </p> -->
-			<!-- <p><a class="aButton" href="survey.html">CLICK HERE</a></p>   -->
-		<!-- </section> -->
     </main>	
+	
+	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	
+	<script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        setting-name: setting-value
+      });
+    });
+	</script>
+	
 </body>
+</html>

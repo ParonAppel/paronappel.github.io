@@ -25,6 +25,9 @@
   --iconbox_inner_size: 3.05vh;
   
   --border_size: 0.2vw;
+  
+  --font_size:  calc(4vw / 3);
+  
 }
 
 /* General stuff */
@@ -32,7 +35,7 @@ body {
 	display: flex;
 	font-family: 'Roboto Mono', monospace; 
 	font-weight:normal;
-	font-size: calc(4vw / 3);
+	font-size: var(--font_size);
 	background-color: var(--background);
 	top: 0;
     left: 0;
@@ -41,7 +44,7 @@ body {
 /* Header Content */
 header {
 	justify-content: left;
-    display: flex;
+    display: flex nowrap ;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,17 +74,18 @@ header ul {
 #menus li a {
 	
 	text-align: center center;
-	padding: 0px 10px calc(var(--header_height) * 0.26) 10px; 
+	padding: 0px 0.5vw calc((var(--header_height)/2) - var(--font_size)) 0.5vw; 
+	
     margin-right: 10px;
 	background-color: var(--main);
-	border-bottom: var(--border_size) solid var(--background); 
+	border-bottom: var(--border_size) solid var(--main); 
 	transition: border-bottom 300ms, background-color 300ms; 
 
 }
 
 #menus li a:hover {
 	background-color: var(--main);
-	border-bottom: var(--border_size) solid #031424;
+	border-bottom: var(--border_size) solid var(--text);
 	transition: border-bottom 300ms, background-color 300ms; 
 
 }
@@ -187,9 +191,8 @@ header ul {
 	background-color: transparent;
 	border-radius: 2px;
 	border: 3px solid var(--secondary);
-	padding: 8px 18px;
+	padding:  3vh;
 	
-	overflow: hidden;
 	
 	font-size: 22px;
 	text-decoration: none;
@@ -227,7 +230,7 @@ header ul {
 }
 
 .fancyButton:hover {
-	overflow: hidden;
+	
 	color: var(--background);
 }
 
@@ -235,12 +238,16 @@ header ul {
 .buttonContainer {
 	position: relative;
 	
-	padding-top: 8px;
-	padding-bottom: 10px;
+	/* padding-top: 1.3vh; */
+	/* padding-bottom: 1.3vh; */
 	
 	overflow:hidden;
 	width: auto;
 	height: calc(auto + 30%);
+	
+	
+	
+	/* border: 3px solid var(--secondary); */
 }
 
 
