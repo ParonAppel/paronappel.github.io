@@ -41,6 +41,7 @@ body {
     left: 0;
 }
 
+
 /* Header Content */
 header {
 	justify-content: left;
@@ -70,6 +71,7 @@ header ul {
 	 
 }
 
+
 /* Header menu buttons */
 #menus li a {
 	
@@ -96,6 +98,7 @@ header ul {
 	transition: border-bottom 300ms, background-color 300ms; 
 	
 }
+
 
 /* External icons */
 #contact {
@@ -133,7 +136,6 @@ header ul {
 	overflow:hidden;
 }
 
-
 .iconBox:hover {
 		
 	background-color:var(--text);
@@ -141,7 +143,6 @@ header ul {
 	position: relative;
 	
 }
-
 
 .iconImg {
 	
@@ -156,7 +157,6 @@ header ul {
 	
 }
 
-
 .iconBox:hover .iconImgHover {
 		
 	opacity: 0;
@@ -164,26 +164,8 @@ header ul {
 
 
 /* Other Stuff */
-.simpleButton {
-	
-	background-color: var(--main);
-	border-radius: 2px;
-	border: 3px solid var(--secondary);
-	padding: 8px 18px;
-	font-size: 22px;
-	
-	text-decoration: none;
-	color: var(--secondary);
-	
-	transition: background-color 100ms, color 100ms;
-}
 
-.simpleButton:hover {
-	
-	background-color: #30415D;
-	color: #CF6766;
-}
-
+/* Fancy Button */
 .fancyButton {
 	
 	position: relative;
@@ -191,7 +173,7 @@ header ul {
 	background-color: transparent;
 	border-radius: 2px;
 	border: 3px solid var(--secondary);
-	padding:  3vh;
+	padding: 3vh;
 	
 	
 	font-size: 22px;
@@ -199,7 +181,7 @@ header ul {
 	color: #30415D;
 	z-index: 1;
 	
-	transition: all 100ms ease-in-out;
+	transition: all 300ms ease-in-out;
 }
 
 .fancyButton::before {
@@ -208,38 +190,56 @@ header ul {
 	position: absolute;
 	
 	width: 100%;
-	height: 0;
-	top: 50%;
-	left: 50%;
-	
-	background-color: var(--secondary);
-	z-index: -1;
+	height: 120%;
+		
+	border: 3px solid var(--secondary);	
 	opacity: 0;
 	
+	transform: translateX(-4.5vh) translateY(-1vh);
+	transition: all 300ms ease-in-out;
 	
-	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.fancyButton::after {
+	
+	content: '';
+	position: absolute;
+	
+	width: 100%;
+	height: 120%;
+	
+	border: 3px solid var(--secondary);
+	opacity: 0;
+	
+	transform: translateX(4.5vh) translateY(-1vh);
 	transition: all 300ms ease-in-out;
 	
 }
 
 .fancyButton:hover::before {
 	
-	height: 260%;
 	opacity: 1;
+	transition: all 300ms ease-in-out;
 	
+}
+
+.fancyButton:hover::after {
+	
+	opacity: 1;
+	transition: all 300ms ease-in-out;
 }
 
 .fancyButton:hover {
 	
-	color: var(--background);
+	padding: 5.5vh;
+	transition: all 300ms ease-in-out;
 }
-
 
 .buttonContainer {
 	position: relative;
 	
 	/* padding-top: 1.3vh; */
-	/* padding-bottom: 1.3vh; */
+	padding-bottom: 1vh;
 	
 	overflow:hidden;
 	width: auto;
@@ -252,7 +252,6 @@ header ul {
 
 
 /* Sections */
-
 section {
 	
     height: 100vh;
@@ -270,6 +269,36 @@ section {
     background-attachment: fixed;
 }
 
+#top {
+
+    display: flex;
+	
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+	text-align: center;
+	
+	column-gap: 1%;
+	
+	margin-top: 60px;
+	
+	height: 90vh;
+	border-bottom: 4px solid var(--background);
+	
+}
+
+h1 {
+	
+	font-size: 60px;
+	margin: 1vw;
+	margin-top: 4vh;
+}
+
+* {
+	margin: 0px;
+}
+
+/* Big circle image */
 .bigImg {
 	
 	display:block;
@@ -290,33 +319,4 @@ section {
 	
 	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	
-}
-
-#top {
-
-    display: flex;
-	
-	flex-direction: column;
-	justify-content: center;
-	align-items: center; 
-	text-align: center;
-	
-	column-gap: 1%;
-	
-	margin-top: 60px;
-	
-	height: 90vh;
-	border-bottom: 4px solid var(--secondary);
-	
-}
-
-h1 {
-	
-	font-size: 60px;
-	margin: 1vw;
-	margin-top: 4vh;
-}
-
-* {
-	margin: 0px;
 }
