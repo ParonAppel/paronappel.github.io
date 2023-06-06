@@ -324,7 +324,7 @@ section {
 	
 	column-gap: 1%;
 	
-	font-size: calc(var(--font_size) * 0.8);
+	font-size: var(--font_size);
 	
 	margin-top: 10vh;
 	
