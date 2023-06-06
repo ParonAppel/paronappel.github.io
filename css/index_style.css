@@ -139,7 +139,7 @@ header ul {
 .iconBox:hover {
 		
 	background-color:var(--text);
-	border: 3px solid var(--text);
+	border: var(--border_size) solid var(--text);
 	position: relative;
 	
 }
