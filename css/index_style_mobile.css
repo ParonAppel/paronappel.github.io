@@ -3,8 +3,7 @@
   /* Color palette */
 	
   /* crimson sky */
-  --main: #CF6766;
-  
+  --main: #CF6766;  
   --dark_main: #CA6665;
   
   /* indigo */
@@ -24,31 +23,27 @@
   --iconbox_size: 4vh;
   --iconbox_inner_size: 3.05vh;
   
-  --border_size: 0.2vw;
+  --border_size: 0.4vh;
   
-  --font_size:  calc(4vw / 3);
+  --font_size: 3vh;
   
 }
 
 /* General stuff */
 body {
-
 	display: flex;
 	font-family: 'Roboto Mono', monospace; 
-	font-weight:normal;
+	font-weight: normal;
 	font-size: var(--font_size);
 	background-color: var(--background);
 	top: 0;
     left: 0;
-
 }
-
 
 /* Header Content */
 header {
-
-	justify-content: left;
-    display: flex nowrap ;
+	justify-content: right;
+    display: inline;
     position: fixed;
     top: 0;
     left: 0;
@@ -57,46 +52,77 @@ header {
     line-height: var(--header_height);
 	background-color: var(--main);
 	z-index: 100;
-
 }
 
 header * {
 	
-    display: inline;
-    height: var(--header_height);
+	display: block;
+	width: 100vw;
+}
+
+#menus ul {
+	
+	width: 100vw;
+	text-align: center;
+	padding-left: 0px;
+}
+
+.menuToggle{
+
+	position:fixed;
+	top: 0;
+	left: 85vw;
+	width: var(--header_height);
+	height: var(--header_height);
+
+}
+
+.homeButton{
+
+	position: relative;
+	top: 0;
+	left: 39vw;
+	width: 100vw;
+	padding: 0px;
+	text-align: center;
+	width: var(--header_height);
+	height: var(--header_height);
 	text-decoration: none;
 	color: var(--text);
+
 }
 
-header ul {
-	
-	margin-left: 7vw;
+.menuToggle img{
+
+	width: var(--header_height);
 	height: var(--header_height);
-	 
+
 }
 
-.homeButton {
+#menuItems {
 
+	position: relative;
 	display: none;
-	
+	text-decoration: none;
+	color: var(--text);
+	justify-content: left;
+	padding-bottom: calc(var(--header_height) * 0.4);
+
 }
 
-.menuToggle {
-
-	display: none;
-
+nav {
+	background-color: var(--main);
 }
 
 /* Header menu buttons */
 #menus li a {
 	
 	text-align: center center;
-	padding: 0px 0.5vw calc((var(--header_height)/2) - var(--font_size)) 0.5vw; 
-	
-    margin-right: 10px;
+	text-decoration: none;
 	background-color: var(--main);
 	border-bottom: var(--border_size) solid var(--main); 
 	transition: border-bottom 300ms, background-color 300ms; 
+	color: var(--text);
 
 }
 
@@ -119,15 +145,15 @@ header ul {
 #contact {
 	
 	position:relative;
-	left: 75vw;	
 	
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around; 
-	width: 15vw;
+	justify-content: space-evenly; 
+	width: 100vw;
 	
 	align-items: center; 
 	text-align: center;
+	background-color: var(--main);
 }
 
 .iconBox {
@@ -144,7 +170,7 @@ header ul {
 	border: var(--border_size) solid var(--text);
 	position: relative;
 	
-	top: calc(var(--header_height) * -1);
+	top: calc(var(--header_height) - (var(--iconbox_size) * 1.4));
 	
 	transition: border 200ms, background-color 200ms;
 	
@@ -307,6 +333,7 @@ h1 {
 	font-size: 60px;
 	margin: 1vw;
 	margin-top: 4vh;
+
 }
 
 * {

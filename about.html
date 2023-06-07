@@ -1,60 +1,82 @@
 <!DOCTYPE html>
 <html lang=sv>
-<head>
-	<title>Isabella Norström</title>
-	<meta charset=utf-8>
-	<link rel="stylesheet" href="css\about_style.css">
-	<style>
-	
-		@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+	<head>
+		<title>Isabella Norström</title>
+		<meta charset=utf-8>
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 1080px)" href="css\about_style.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 1080px)" href="css\about_style_mobile.css">
+		<style>
 		
-	</style>
-</head>
-<body>
-	<header>
-
-		<nav>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 		
-			<div id="menus">
-				<ul>
-					<li><a href="index.html"> Home</a></li>
-					<li><a class="active" href="about.html"> About</a></li>
-					<li><a href="portfolio.html"> Portfolio</a></li>
-				</ul>	
-			</div>
+		</style>
+		
+		<script>
+		
+			function menuToggle() {
+				var x = document.getElementById("menuItems");
+				if (x.style.display === "block") {
+					x.style.display = "none";
+				} else {
+					x.style.display = "block";
+				}		
+			}
 			
-			<div id="contact">
-				<div class="iconBox">
-					<a class="icon" href="https://www.linkedin.com/in/isanor" target="_blank"> 
-						<img src="css\icons\linkedin-rollover.png" class="iconImg" alt="LinkedIn">
-						<img src="css\icons\linkedin.png" class="iconImg iconImgHover" alt="LinkedIn">
-					</a> 		
-				</div>
-				
-				<div class="iconBox">
-					<a class="icon" href="https://github.com/ParonAppel" target="_blank"> 	
-						<img src="css\icons\github-sign-rollover.png" class="iconImg" alt="GitHub">
-						<img src="css\icons\github-sign.png" class="iconImg iconImgHover" alt="GitHub">
-					</a> 		
-				</div>
-				
-				<div class="iconBox">
-					<a class="icon" href="https://portal.playgroundsquad.com/studenter/Isabella-Norstrom/" target="_blank"> 
-						<img src="css\icons\PSQicon-rollover.png" class="iconImg" alt="PSQ">
-						<img src="css\icons\PSQicon.png" class="iconImg iconImgHover" alt="PSQ">
-					</a> 		
-				</div>
-				
-				<div class="iconBox">
-					<a class="icon" href="mailto: i.norstrom@live.se" target="_blank"> 
-						<img src="css\icons\email-rollover.png" class="iconImg" alt="Email">
-						<img src="css\icons\email.png" class="iconImg iconImgHover" alt="Email">	
-					</a> 		
-				</div>
+		</script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a class="homeButton" href="index.html">
+					ParonAppel
+				</a>
+				<div id="menuItems">
 					
-			</div>
-		</nav>
-	</header>
+					<div id="menus">
+						<ul>
+							<li><a href="index.html"> Home</a></li>
+							<li><a class="active" href="about.html"> About</a></li>
+							<li><a href="portfolio.html"> Portfolio</a></li>
+						</ul>	
+					</div>
+					
+					<div id="contact">
+						<div class="iconBox">
+							<a class="icon" href="https://www.linkedin.com/in/isanor" target="_blank"> 
+								<img src="css\icons\linkedin-rollover.png" class="iconImg" alt="LinkedIn">
+								<img src="css\icons\linkedin.png" class="iconImg iconImgHover" alt="LinkedIn">
+							</a> 		
+						</div>
+						
+						<div class="iconBox">
+							<a class="icon" href="https://github.com/ParonAppel" target="_blank"> 	
+								<img src="css\icons\github-sign-rollover.png" class="iconImg" alt="GitHub">
+								<img src="css\icons\github-sign.png" class="iconImg iconImgHover" alt="GitHub">
+							</a> 		
+						</div>
+						
+						<div class="iconBox">
+							<a class="icon" href="https://portal.playgroundsquad.com/studenter/Isabella-Norstrom/" target="_blank"> 
+								<img src="css\icons\PSQicon-rollover.png" class="iconImg" alt="PSQ">
+								<img src="css\icons\PSQicon.png" class="iconImg iconImgHover" alt="PSQ">
+							</a> 		
+						</div>
+						
+						<div class="iconBox">
+							<a class="icon" href="mailto: i.norstrom@live.se" target="_blank"> 
+								<img src="css\icons\email-rollover.png" class="iconImg" alt="Email">
+								<img src="css\icons\email.png" class="iconImg iconImgHover" alt="Email">	
+							</a> 		
+						</div>
+					</div>
+				</div>
+	
+				<a href="javascript:void(0);" class="menuToggle" onclick="menuToggle()">
+					<img src="css/icons/three-bars.png">
+				</a>
+				
+			</nav>
+		</header>
 	
 	<main>
 		<section id="about-top">
@@ -87,7 +109,7 @@
 			</div>
 			
 			<div style="margin: 2vh;">
-				<p> <a href="#skills" > <img style="width: 4vw;" src="css/icons/down-arrow.png"/> </a></p>
+				<p> <a href="#skills" > <img style="width: 8vh;" src="css/icons/down-arrow.png"/> </a></p>
 			</div>
 		</section>
 		
