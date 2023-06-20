@@ -29,7 +29,6 @@
 
 /* General stuff */
 body {
-	display: flex;
 	font-family: 'Roboto Mono', monospace; 
 	font-weight:normal;
 	font-size: var(--font_size);
@@ -169,7 +168,6 @@ header ul {
 }
 
 
-
 /* Other Stuff */
 .aButton {
 	
@@ -213,35 +211,11 @@ h3 {
 	align-items: center;
 	height: 120vh;
 	column-count: 3;
-	column-gap: 100px;
+	column-gap: 1vw;
 	padding-right: 100px;
 	padding-left: 100px;
 }
 		
-/* .rightSide { */
-	/* display: flex; */
-	/* flex-direction: column; */
-	/* justify-content: center; */
-	/* align-items: center; */
-	/* height: 100vh; */
-	/* width: 75%; */
-	/* background-color: white; */
-				
-/* } */
-		
-/* .leftSide { */
-	/* display: flex; */
-	/* flex-direction: column; */
-	/* justify-content: center; */
-	/* align-items: center; */
-	/* text-align: center; */
-	/* height: 100vh; */
-	/* padding-right: 80px; */
-	/* padding-left: 80px; */
-	/* background-color: white; */
-	/* border-right: 1px solid grey; */
-	
-/* } */
 				
 .sides{	
 		
@@ -277,7 +251,7 @@ h3 {
 	
 	height: 80vh;
 	width: 30vw;
-	padding: 20px;
+	padding: 1vw;
 
 	background-position: center center; 
 	background-repeat: no-repeat; 		
