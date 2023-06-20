@@ -70,6 +70,18 @@ header ul {
 	 
 }
 
+.homeButton {
+
+	display: none;
+	
+}
+
+.menuToggle {
+
+	display: none;
+
+}
+
 /* Header menu buttons */
 #menus li a {
 	
