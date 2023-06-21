@@ -85,8 +85,8 @@ header * {
 
 	position: relative;
 	top: 0;
-	left: 39vw;
-	width: 100vw;
+	left: calc(25vw + var(--font_size));
+	width: auto;
 	padding: 0px;
 	text-align: center;
 	width: var(--header_height);
