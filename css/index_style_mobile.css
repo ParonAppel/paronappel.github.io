@@ -26,6 +26,10 @@
   --border_size: 0.4vh;
   
   --font_size: 3vh;
+
+  --fancy_button_padding: 3vh;
+  --fancy_button_expansion: 5.5vh;
+  --fancy_button_line_distance: 1vh;
   
 }
 
@@ -214,7 +218,7 @@ nav {
 	background-color: transparent;
 	border-radius: 2px;
 	border: 3px solid var(--secondary);
-	padding: 3vh;
+	padding: var(--fancy_button_padding);
 	
 	
 	font-size: 22px;
@@ -225,70 +229,38 @@ nav {
 	transition: all 300ms ease-in-out;
 }
 
-.fancyButton::before {
-	
-	content: '';
-	position: absolute;
-	
-	width: 100%;
-	height: 120%;
-		
-	border: 3px solid var(--secondary);	
-	opacity: 0;
-	
-	transform: translateX(-4.5vh) translateY(-1vh);
-	transition: all 300ms ease-in-out;
-	
-}
-
-.fancyButton::after {
-	
-	content: '';
-	position: absolute;
-	
-	width: 100%;
-	height: 120%;
-	
-	border: 3px solid var(--secondary);
-	opacity: 0;
-	
-	transform: translateX(4.5vh) translateY(-1vh);
-	transition: all 300ms ease-in-out;
-	
-}
-
-.fancyButton:hover::before {
-	
-	opacity: 1;
-	transition: all 300ms ease-in-out;
-	
-}
-
-.fancyButton:hover::after {
-	
-	opacity: 1;
-	transition: all 300ms ease-in-out;
-}
-
 .fancyButton:hover {
 	
-	padding: 5.5vh;
+	padding: var(--fancy_button_expansion);
 	transition: all 300ms ease-in-out;
 }
+
 
 .buttonContainer {
 	position: relative;
 	
-	/* padding-top: 1.3vh; */
+	padding-top: 1vh;
 	padding-bottom: 1vh;
+
+	padding-right: var(--fancy_button_line_distance);
+	padding-left: var(--fancy_button_line_distance);
 	
 	overflow:hidden;
 	width: auto;
 	height: calc(auto + 30%);
+
+	border-left: 3px solid var(--background);
+	border-right: 3px solid var(--background);
+
+	transition: all 100ms ease-in-out;
+
+}
+
+.buttonContainer.buttonContainer:hover{
 	
+	border-color: var(--secondary);
+	transition: all 100ms ease-in-out;
 	
-	
-	/* border: 3px solid var(--secondary); */
 }
 
 
