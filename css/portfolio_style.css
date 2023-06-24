@@ -301,6 +301,17 @@ h3 {
 	margin: 3vh;
 	
 	overflow: hidden;
+
+	transition: all var(--node_hover_transition);
+
+}
+
+.portfolio-node:hover {
+
+	transform: translateY(-1.5vh);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all var(--node_hover_transition);
+
 }
 
 .node-img {
