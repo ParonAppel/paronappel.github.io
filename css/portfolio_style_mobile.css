@@ -60,7 +60,7 @@
 	  width: 100vw;
   }
   
-  #menus ul {
+  #Menus ul {
 	  
 	  width: 100vw;
 	  text-align: center;
@@ -99,7 +99,7 @@
   
   }
   
-  #menuItems {
+  #MenuItems {
   
 	  position: relative;
 	  display: none;
@@ -115,7 +115,7 @@
   }
   
   /* Header menu buttons */
-  #menus li a {
+  #Menus li a {
 	  
 	  text-align: center center;
 	  text-decoration: none;
@@ -126,14 +126,14 @@
   
   }
   
-  #menus li a:hover {
+  #Menus li a:hover {
 	  background-color: var(--main);
 	  border-bottom: var(--border_size) solid var(--text);
 	  transition: border-bottom 300ms, background-color 300ms; 
   
   }
   
-  #menus li a.active {
+  #Menus li a.active {
 	  background-color: var(--main);
 	  border-bottom: var(--border_size) solid var(--text);
 	  transition: border-bottom 300ms, background-color 300ms; 
@@ -142,7 +142,7 @@
   
   
   /* External icons */
-  #contact {
+  #Contact {
 	  
 	  position:relative;
 	  

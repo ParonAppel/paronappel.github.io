@@ -84,7 +84,7 @@ header ul {
 }
 
 /* Header menu buttons */
-#menus li a {
+#Menus li a {
 	
 	text-align: center center;
 	padding: 0px 0.5vw calc((var(--header_height)/2) - var(--font_size)) 0.5vw; 
@@ -96,14 +96,14 @@ header ul {
 
 }
 
-#menus li a:hover {
+#Menus li a:hover {
 	background-color: var(--main);
 	border-bottom: var(--border_size) solid var(--text);
 	transition: border-bottom 300ms, background-color 300ms; 
 
 }
 
-#menus li a.active {
+#Menus li a.active {
 	background-color: var(--main);
 	border-bottom: var(--border_size) solid var(--text);
 	transition: border-bottom 300ms, background-color 300ms; 
@@ -111,7 +111,7 @@ header ul {
 }
 
 /* External icons */
-#contact {
+#Contact {
 	
 	position:relative;
 	left: 75vw;	
