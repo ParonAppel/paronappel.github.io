@@ -67,7 +67,7 @@
 	  padding-left: 0px;
   }
   
-  .menuToggle{
+  .menu-toggle{
   
 	  position:fixed;
 	  top: 0;
@@ -77,7 +77,7 @@
   
   }
   
-  .homeButton{
+  .home-button{
   
 	  position: relative;
 	  top: 0;
@@ -92,7 +92,7 @@
   
   }
   
-  .menuToggle img{
+  .menu-toggle img{
   
 	  width: var(--header_height);
 	  height: var(--header_height);
@@ -156,7 +156,7 @@
 	  background-color: var(--main);
   }
   
-  .iconBox {
+  .icon-box {
 	  
 	  display: flex;
 	  justify-content: center; 
@@ -177,7 +177,7 @@
 	  overflow:hidden;
   }
   
-  .iconBox:hover {
+  .icon-box:hover {
 		  
 	  background-color:var(--text);
 	  border: var(--border_size) solid var(--text);
@@ -185,7 +185,7 @@
 	  
   }
   
-  .iconImg {
+  .icon-img {
 	  
 	  position:absolute;
 	  
@@ -198,7 +198,7 @@
 	  
   }
   
-  .iconBox:hover .iconImgHover {
+  .icon-box:hover .icon-img-hover {
 		  
 	  opacity: 0;
   }
@@ -207,7 +207,7 @@
   /* Other Stuff */
 
 /* Other Stuff */
-.aButton {
+.simple-button {
 	
 	background-color: #CF6766;
 	border-radius: 2px;
@@ -221,7 +221,7 @@
 	transition: background-color 100ms, color 100ms;
 }
 
-.aButton:hover {
+.simple-button:hover {
 	
 	background-color: #30415D;
 	color: #CF6766;
@@ -242,7 +242,7 @@ h3 {
 	
 }
 		
-.Columns {
+.columns {
 
 	display: flex;
 	justify-content: center;
@@ -255,7 +255,7 @@ h3 {
 }
 		
 
-.GradientBorders {
+.gradient-borders {
 	
 	display: flex;
 	flex-direction: column;
@@ -296,7 +296,7 @@ h3 {
 	
 }
 
-.sides .aButton {
+.sides .simple-button {
 
 	position: relative;
 	top: 100px;

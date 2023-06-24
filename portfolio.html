@@ -27,51 +27,51 @@
 	<body>
 		<header>
 			<nav>
-				<a class="homeButton" href="index.html">
+				<a class="home-button" href="index.html">
 					ParonAppel
 				</a>
-				<div id="menuItems">
+				<div id="menu-items">
 					
 					<div id="menus">
 						<ul>
-							<li><a href="index.html"> Home</a></li>
-							<li><a href="about.html"> About</a></li>
-							<li><a class="active" href="portfolio.html"> Portfolio</a></li>
+							<li><a href="index.html"> Home </a></li>
+							<li><a href="about.html"> About </a></li>
+							<li><a class="active" href="portfolio.html"> Portfolio </a></li>
 						</ul>	
 					</div>
 					
 					<div id="contact">
-						<div class="iconBox">
+						<div class="icon-box">
 							<a class="icon" href="https://www.linkedin.com/in/isanor" target="_blank"> 
-								<img src="css\icons\linkedin-rollover.png" class="iconImg" alt="LinkedIn">
-								<img src="css\icons\linkedin.png" class="iconImg iconImgHover" alt="LinkedIn">
+								<img src="css\icons\linkedin-rollover.png" class="icon-img" alt="LinkedIn">
+								<img src="css\icons\linkedin.png" class="icon-img icon-img-hover" alt="LinkedIn">
 							</a> 		
 						</div>
 						
-						<div class="iconBox">
+						<div class="icon-box">
 							<a class="icon" href="https://github.com/ParonAppel" target="_blank"> 	
-								<img src="css\icons\github-sign-rollover.png" class="iconImg" alt="GitHub">
-								<img src="css\icons\github-sign.png" class="iconImg iconImgHover" alt="GitHub">
+								<img src="css\icons\github-sign-rollover.png" class="icon-img" alt="GitHub">
+								<img src="css\icons\github-sign.png" class="icon-img icon-img-hover" alt="GitHub">
 							</a> 		
 						</div>
 						
-						<div class="iconBox">
+						<div class="icon-box">
 							<a class="icon" href="https://portal.playgroundsquad.com/studenter/Isabella-Norstrom/" target="_blank"> 
 								<img src="css\icons\PSQicon-rollover.png" class="iconImg" alt="PSQ">
-								<img src="css\icons\PSQicon.png" class="iconImg iconImgHover" alt="PSQ">
+								<img src="css\icons\PSQicon.png" class="icon-img icon-img-hover" alt="PSQ">
 							</a> 		
 						</div>
 						
-						<div class="iconBox">
+						<div class="icon-box">
 							<a class="icon" href="mailto: i.norstrom@live.se" target="_blank"> 
 								<img src="css\icons\email-rollover.png" class="iconImg" alt="Email">
-								<img src="css\icons\email.png" class="iconImg iconImgHover" alt="Email">	
+								<img src="css\icons\email.png" class="icon-img icon-img-hover" alt="Email">	
 							</a> 		
 						</div>
 					</div>
 				</div>
 	
-				<a href="javascript:void(0);" class="menuToggle" onclick="menuToggle()">
+				<a href="javascript:void(0);" class="menu-toggle" onclick="menuToggle()">
 					<img src="css/icons/three-bars.png">
 				</a>
 				
@@ -80,78 +80,50 @@
 	<main>
 	
 
-		<section id="AllProjects"> 
-			<div class ="Columns">
-				<h3> The anatomy of Blåhaj </h3>
-				<img src="anatomyBlahaj.jpg" class="big-img" alt="A big blahaj">
+		<section id="AllProjects" style="padding-top: 10vh;"> 
+			<div class ="card-display">
 
-				<div class="Column">
-
-					<div class="PortfolioNode" id="FullMoonFears">
-
-
-					</div>
+					<a class="portfolio-node" id="FullMoonFears" href="">
+						<img class="node-img" src="css/pictures/FullMoonFears.png"/>
+	
+						<h3 class="node-name"> Full Moon Fears </h3>
+	
+						<p class="node-description"> 
+							Made by Alpha Daddy Interactive for Game Project 1 at PSQ <br>  <br>
+							A werewolf horror game on PC.
+						</p>
+	
+						<div class="node-tag-box">
+							<p class="node-tag"> UE5</p>
+							<p class="node-tag"> C++</p>
+							<p class="node-tag"> School Project</p>
+						</div>
+					</a>
 					
-					<div class="PortfolioNode" id="CookieClicker">
+					<a class="portfolio-node" id="CookieClicker">
+						<h3 class="node-name"> Cookie Clicker Clone </h3>
 
-
-					</div>
-				</div>
-				<div class="Column">
-
-					<div class="PortfolioNode" id="AlienInternVR">
-
-
-					</div>
-
-
-
-				</div>
-				<div class="Column">
-
-					<div class="PortfolioNode" id="GameProjectThree">
-
-
-					</div>
-
-
-				</div>
-
-			</div>
-		</section>
-		
-		<section id="PSQProjects" style="padding-top: 50px;">
-		
-		 <!-- <h2 style="position: relative; left: 50vw; width: 25vw;"> PSQ Game Projects </h2> -->
-		 
-			<div class="Columns">
-			
-				<div class= "GradientBorders" >
-					<div class="sides" style="background-image:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('FullMoonFears.png');">
-						<!-- <h3> Full Moon Fears </h3> -->
-						<p> An Alpha Daddy Interactive Production </p>
-						<p><a class="aButton" href="#PSQProjects"> View Project One </a></p>  
-					</div>
-				</div>
+					</a>
 				
-				<div class= "GradientBorders" >
-					<div class="sides" style="background-image:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('AlienInternLogo.png');">
-						<!-- <h3> Alien Intern VR </h3> -->
-						<p> Currently under construction! <br>
-						 Will soon be available </p>
-						<p><a class="aButton" href="#PSQProjects"> View Project Two</a></p> 
-					</div>
-				</div>
 				
-				<div class= "GradientBorders" >
-					<div class="sides" style="background-image:linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url('anatomyBlahaj.jpg');">
-						<!-- <h3> NullPointerException </h3> -->
-						<p> Project 3 will happen in autumn 2023 <br>
-						 So you will have to wait :( </p>
-						<p><a class="aButton" href="#PSQProjects"> View Project Three </a></p> 
-					</div>
-				</div>
+
+					<a class="portfolio-node" id="AlienInternVR">
+						<h3 class="node-name"> Alien Intern VR </h3>
+
+					</a>
+
+
+
 				
+
+					<a class="portfolio-node" id="GameProjectThree">
+						<h3 class="node-name"> NullPointerException </h3>
+
+					</a>
+
+
+				
+
 			</div>
 		</section>
 			
