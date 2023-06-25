@@ -240,7 +240,7 @@ header ul {
 	top:  calc(var(--node_padding) * -1);
 	width: 125%;
 	height: 25vh;
-	object-fit: cover;
+	object-fit: fill;
 	filter: grayscale(70%);
 	transition: all var(--node_hover_transition);
 
