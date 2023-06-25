@@ -174,12 +174,22 @@ header ul {
 
 
 /* columns */
-.card-display {
-
-	display: grid;
-	grid-template-columns: 25vw 25vw 25vw;
+.node-columns {
+	display: flex;
+	flex-direction: row;
 	column-count: 3;
-	align-items: center;
+	align-items: start;
+	justify-content: center;
+
+	padding-right: 12vw;
+	padding-left: 12vw;
+}
+
+.node-column {
+	display: flex;
+	flex-direction: column;
+	
+	align-items: start;
 	justify-content: center;
 	
 }
@@ -191,7 +201,7 @@ header ul {
 	width: auto;
 	height: auto;
 
-	display: inline-grid;
+	display: inline-block;
 	flex-direction: column;
 
 	justify-content: bottom; 
