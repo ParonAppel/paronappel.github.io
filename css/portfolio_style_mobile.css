@@ -26,6 +26,12 @@
 	--border_size: 0.4vh;
 	
 	--font_size: 3vh;
+
+	--column_padding: 10vw;
+	--column_separation: 2vw;
+  
+	--node_hover_transition: 300ms;
+	--node_padding : 2vw;
 	
   }
   
