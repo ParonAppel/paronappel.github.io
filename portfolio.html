@@ -32,7 +32,7 @@
 					var elementTop = popout[i].getBoundingClientRect().top;
 					var elementBottom = popout[i].getBoundingClientRect().bottom;
 					var elementTopBuffer = 400;
-					var elementBottomBuffer = 1000;
+					var elementBottomBuffer = windowHeight/3;
 
 					if (elementTop < windowHeight - elementTopBuffer && elementBottom > elementBottomBuffer)   
 					{
@@ -46,6 +46,7 @@
 			}
 
 			window.addEventListener("scroll", popout);
+
 			popout();
 			
 		</script>
@@ -110,7 +111,7 @@
 			<div class ="node-columns">
 
 				<div class="node-column">
-					<a class="portfolio-node" id="AlienInternVR" href="project-pages/alien-intern.html">
+					<a class="portfolio-node popout" id="AlienInternVR" href="project-pages/alien-intern.html">
 						<img class="node-img" src="css/pictures/AlienInternLogo.png" alt="AlienInternVR">
 	
 						<h3 class="node-name"> Alien Intern VR </h3>
