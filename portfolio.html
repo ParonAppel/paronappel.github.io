@@ -21,6 +21,32 @@
 					x.style.display = "block";
 				}		
 			}
+
+			function popout() 
+			{
+				var popout = document.querySelectorAll(".portfolio-node")
+
+				for (var i = 0; i < popout.length; i++) 
+				{
+					var windowHeight = window.innerHeight;
+					var elementTop = popout[i].getBoundingClientRect().top;
+					var elementBottom = popout[i].getBoundingClientRect().bottom;
+					var elementTopBuffer = 400;
+					var elementBottomBuffer = 1000;
+
+					if (elementTop < windowHeight - elementTopBuffer && elementBottom > elementBottomBuffer)   
+					{
+						popout[i].classList.add("popout");
+					}
+					else 
+					{
+						popout[i].classList.remove("popout");
+					}
+				}	
+			}
+
+			window.addEventListener("scroll", popout);
+			popout();
 			
 		</script>
 	</head>
@@ -84,7 +110,7 @@
 			<div class ="node-columns">
 
 				<div class="node-column">
-					<a class="portfolio-node" id="AlienInternVR">
+					<a class="portfolio-node" id="AlienInternVR" href="project-pages/alien-intern.html">
 						<img class="node-img" src="css/pictures/AlienInternLogo.png" alt="AlienInternVR">
 	
 						<h3 class="node-name"> Alien Intern VR </h3>
@@ -102,7 +128,7 @@
 						</div>
 					</a>
 
-					<a class="portfolio-node" id="FullMoonFears" href="">
+					<a class="portfolio-node" id="FullMoonFears" href="project-pages/full-moon-fears.html">
 						<img class="node-img" src="css/pictures/FullMoonFears.png" alt="FullMoonFears">
 	
 						<h3 class="node-name"> Full Moon Fears </h3>
@@ -123,7 +149,7 @@
 
 				<div class="node-column">
 
-					<a class="portfolio-node" id="CookieClicker">
+					<a class="portfolio-node" id="CookieClicker" href="project-pages/cookie-clicker-clone.html">
 						<img class="node-img" src="css/pictures/cookie-button.png" alt="CookieClickerClone">
 
 						<h3 class="node-name"> Cookie Clicker Clone </h3>
@@ -145,7 +171,7 @@
 				</div>
 
 				<div class="node-column">
-					<a class="portfolio-node" id="ThisWebsite" href="">
+					<a class="portfolio-node" id="ThisWebsite" href="project-pages/this-website.html">
 						<img class="node-img" src="css/pictures/bigbackgroundpixel.png" alt="ThisPage">
 	
 						<h3 class="node-name"> This Website </h3>
@@ -165,7 +191,6 @@
 				</div>
 
 			</div>
-		</section>
-			
+		</section>			
     </main>	
 </body>
