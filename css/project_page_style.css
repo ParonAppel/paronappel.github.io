@@ -285,7 +285,7 @@ section {
 	align-items: center;
 	text-align: center;
 	height: 100%;
-	border-right: 1px solid grey;
+	/* border-right: 1px solid grey; */
 	width:50%;
 	padding-left: 5vw;
 }
@@ -337,6 +337,8 @@ h1 {
 	display: flex;
 	flex-direction: row;
 
+	width: 40vw;
+
 	border-top: solid var(--border_size) var(--secondary);
 	padding-top: 2%;
 
@@ -348,6 +350,7 @@ h1 {
 
 	margin-top: 5vh;
 	margin-bottom: 2vh;
+
 }
 
 .info-node {
