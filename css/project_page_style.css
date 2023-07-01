@@ -242,7 +242,7 @@ header ul {
 section {
 	
     height: 100vh;
-	width: 98.5vw;
+	width: 100vw;
     border-bottom: 4px solid var(--secondary);
     display: flex;
     justify-content: center;
