@@ -199,6 +199,8 @@ header ul {
 	text-decoration: none;
 	color: #30415D;
 	z-index: 1;
+
+	white-space: nowrap;
 	
 	transition: all 300ms ease-in-out;
 }
