@@ -12,7 +12,8 @@
 	</style>
 	
 	<script>
-	
+
+
 		function menuToggle() {
 			var x = document.getElementById("MenuItems");
 			if (x.style.display === "block") {
@@ -21,7 +22,21 @@
 				x.style.display = "block";
 			}		
 		}
-		
+
+		function enlargeImage(element) {
+
+			if(element.classList.contains("blown-up-accordion-image")) {
+
+				element.classList.remove("blown-up-accordion-image");
+
+			} else {
+
+				element.classList.add("blown-up-accordion-image");
+
+			}    	
+		}
+
+
 	</script>
 </head>
 <body>
@@ -91,30 +106,30 @@
 					<div class="quick-info">
 
 						<div class="info-node">
-							<p> Duration </p>
-							<p> 9 weeks </p>
+							<p> Duration</p>
+							<p> 9 weeks</p>
 						</div>
 
 						<div class="info-node">
-							<p> Languages </p>
-							<p> C++, Blueprints </p>
+							<p> Languages</p>
+							<p> C++, Blueprints</p>
 						</div>
 
 						<div class="info-node">
-							<p> Engine </p>
-							<p> Unreal Engine 5 </p>
+							<p> Engine</p>
+							<p> Unreal Engine 5</p>
 						</div>
 
 						<div class="info-node">
-							<p> Platforms </p>
-							<p> PSVR2 </p>
+							<p> Platforms</p>
+							<p> PSVR2</p>
 						</div>
 
 					</div>
 
 					<p class="short-description">
 						Alien Intern VR is a job simulator/comedy game bulit around on so-called modules,
-						 which are different distractions and job tasks the player needs to get through in order to get to the next day. <br>
+						 which are different distractions and job tasks the player needs to get through in order to get to the next day.
 						 Unless the player wants to explode!
 					</p>
 
@@ -133,6 +148,147 @@
 			</div>
 
 		</section>	
+
+		<section id="TLDR">
+			<h2> TL;DR </h2>
+
+			<p class="TLDR-text"> My <b>responsiblities</b> for this project was mainly the programming side of <b>UI/UX</b> and <b>making modules</b>. <br> <br>
+
+				My work on the UI included making <b>custom c++ classes</b> for entire widgets, but also for indivdual elements such as buttons for easy <b>modification and reusability</b>. <br> <br>	
+
+				I had a lot of freedom over how the modules I created were supposed to play out. So I had the opportunity to <b>design a sizable portion</b> of them in addition to programming them primarily in <b>blueprints</b>. <br> <br>
+
+				The UX work I made mainly consisted of making humorous <b>death screens </b> and creating simple VFX and implementing already existing ones for indicating completion or failure.
+			</p>
+
+		</section>
+
+		<section id="MoreInfo">
+			<h2> More info </h2>
+
+			<details>
+				<summary>
+					UI with UMG and C++
+					<p class="open-indicator">
+						+
+					</p>
+				</summary>
+				<div class="sides">
+
+					<div>
+						
+					</div>
+					
+					For the UI the most important thing 
+
+				</div>
+			</details>
+
+			<details>
+				<summary>
+					Modules
+					<p class="open-indicator">
+						+
+					</p>
+				</summary>
+
+				<div class="sides" >
+					<div class="left-side">
+						<h3>UI based Modules</h3>
+
+						<p style="font-size: 1.8vh; margin-bottom: 10%;">
+							Both of the UI modules where built up in an identical manner, utilizing the same base classes and similar blueprints.
+							When the module is called upon to begin, they both generate semi-random texts that define how the module will play out. <br> <br>
+
+							<b>The Yes/No module</b> is failable, so on start the module generates two random booleans to determine whether it is a drill and whether it will "exploden't" the office. 
+							These booleans will determine if the player succeeds once they make their selection (or the timer expires).<br> <br>
+
+							<b>The Closed AI module</b> exists only as a distraction. The module selects at random from three different arrays, which containins parts of questions.
+							This often leads to some bizarre and fun questions. The player's choice of answe doesn't matter and will always remove the pop-up... <br> <br>
+							
+							Unless the small chance where the question "would you like to restart the day?" appears. 
+							If it happens, the player could unintentionally restart the current day after receiving a confirmation.		
+						</p>
+
+						<h3>Weightlifter table</h3>
+
+						<p style="font-size: 1.8vh;">
+							The weightlifter table, or gymbro as we often called him, is a distraction module ment to disrupt the players focus. 
+							Aside from nagging on the player to help him out on his leg day, he will also steal the players in-game headset. <br> <br>
+
+							To make gymbro work, I've had to work with animation blueprints, <a class="inline-credits" href="">Viktors</a> sound system, sound cues, etc. 
+							Which I've learned a lot about Unreals built in systems, instead of just working with C++.
+z§W	
+						</p>
+
+					</div>
+					<div class="right-side">
+
+						<p class="small-text"> (click on images to enlarge them!)</p>
+
+						<img class="accordion-image" src="../css/pictures/yes-no-module.png" alt="Yes No Module" onclick="enlargeImage(this)" style="max-height: 25vh; width: auto;"/>
+						<p class="small-text"> Yes/No explosion module</p>
+
+						<img class="accordion-image" src="../css/pictures/closed-ai.png" alt="Closed AI" onclick="enlargeImage(this)" style="height: 24vh; width: auto;"/>
+						<p class="small-text" style="margin-bottom: 30vh;"> Closed AI</p>
+
+						<img class="accordion-image" src="../css/pictures/gymbro.png" alt="Weightlifter table" onclick="enlargeImage(this)" style="height: 24vh; width: auto;"/>
+						<p class="small-text"> Weightlifter table</p>
+
+					</div>
+				</div>
+			</details>
+
+			<details>
+				<summary>
+					UX
+					<p class="open-indicator">
+						+
+					</p>
+				</summary>
+				<div>
+					I did shit
+				</div>
+			</details>
+
+			<details>
+				<summary>
+					Miscellaneous	
+					<p class="open-indicator">
+						+
+					</p>
+				</summary>
+				<div class="sides" >
+					<div class="left-side" style="justify-content: start;">
+						<h3>Tipping water shader</h3>
+
+						<p>
+							As a small last minute detail for the game, we wanted to add coffee to some of our coffee cups.
+							For that we needed some shaders that would keep the coffee plane to the world.   <br> <br>
+
+							Afterwards, I got help from <a class="inline-credits" href="https://prestiges.no/" target="_blank">André</a> to create some simple vfx, 
+							which start when the cup is tilted beyond a certain degree.
+						</p>
+
+					</div>
+					<div class="right-side">
+
+						<p class="small-text"> (click on images to enlarge them!)</p>
+						<img src="../css/pictures/coffee-shader-bp.png" class="accordion-image" onclick="enlargeImage(this)"/>
+						<img src="../css/pictures/upside-down.gif" class="accordion-image" onclick="enlargeImage(this)"/>
+						<img src="../css/pictures/coffee-shader-vr.gif" class="accordion-image" onclick="enlargeImage(this)"/>
+
+
+					</div>
+				</div>
+			</details>
+
+
+
+			<div class="button-container" style="margin-top: 10vh;">
+				<a class="fancy-button" href="../portfolio.html" > Back To Portfolio </a>
+			</div>
+		</section>
     </main>	
 
 </body>
