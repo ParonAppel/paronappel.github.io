@@ -549,6 +549,16 @@ details h3{
 	transition: all 0.5s;
 }
 
+details .left-side {
+
+	justify-content: start;
+}
+
+#GymBro {
+
+	margin-top: 30vh;
+	
+}
 
 /* details[open] summary ~ * {
 	animation: open 1s ease-in-out;

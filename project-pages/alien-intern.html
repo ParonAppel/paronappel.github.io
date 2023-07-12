@@ -150,7 +150,7 @@
 		</section>	
 
 		<section id="TLDR">
-			<h2> TL;DR </h2>
+			<h2> Summary </h2>
 
 			<p class="TLDR-text"> My <b>responsiblities</b> for this project was mainly the programming side of <b>UI/UX</b> and <b>making modules</b>. <br> <br>
 
@@ -175,11 +175,33 @@
 				</summary>
 				<div class="sides">
 
-					<div>
-						
+					<div class="left-side">
+						<p style="font-size: 1.8vh; margin-bottom: 10%;">
+							The two most important parts of the UI were the reusability of classes and keeping motion sickness to a minimum. 	<br> <br>
+							
+							<b>The reusability</b> comes in the form of classes that can be used as bases for other classes. 
+							One such instance is the button base class I created, 
+							which was used for three distinct buttons and then these where in turn utilized in numerous places for easy styling.
+							<br> (See Modules > UI Modules further down	 for more examples of the UI.) <br> <br>
+
+							Making a game in VR presents the challange of <b>motion sickness</b>, and not properly designed UI can be one of the causes.
+							Especially images static to your screen, therefore all the UI is more or less diegetic. For example, the in-game menu takes the for of a hologram wrist watch.
+							Having worked with in-world UI has taught me how to set up interaction between the players controller and the widgets, which is very different from normal 2D UI interaction.
+						</p>
+					</div>
+
+					<div class="right-side">
+						<p class="small-text"> (click on images to enlarge them!)</p>
+
+						<img class="accordion-image" src="../css/pictures/final-main-menu.png" alt="main menu" onclick="enlargeImage(this)" style="max-height: 25vh; width: auto;"/>
+						<p class="small-text"> The final version of the main menu</p>
+
+						<img class="accordion-image" src="../css/pictures/main-menu-interaction.gif" alt="main menu interaction" onclick="enlargeImage(this)" style="height: auto; width: auto;"/>
+						<p class="small-text"> Interaction with main menu</p>
+
 					</div>
 					
-					For the UI the most important thing 
+					
 
 				</div>
 			</details>
@@ -197,13 +219,13 @@
 						<h3>UI based Modules</h3>
 
 						<p style="font-size: 1.8vh; margin-bottom: 10%;">
-							Both of the UI modules where built up in an identical manner, utilizing the same base classes and similar blueprints.
-							When the module is called upon to begin, they both generate semi-random texts that define how the module will play out. <br> <br>
+							Both of the UI modules where built in an identical manner, utilizing the same base classes and similar blueprints.
+							When the module is called upon, they both generate semi-random texts that define how the module will play out. <br> <br>
 
 							<b>The Yes/No module</b> is failable, so on start the module generates two random booleans to determine whether it is a drill and whether it will "exploden't" the office. 
 							These booleans will determine if the player succeeds once they make their selection (or the timer expires).<br> <br>
 
-							<b>The Closed AI module</b> exists only as a distraction. The module selects at random from three different arrays, which containins parts of questions.
+							<b>The Closed AI module</b> exists only as a distraction. The module selects at random from three different arrays, which contains parts of questions.
 							This often leads to some bizarre and fun questions. The player's choice of answe doesn't matter and will always remove the pop-up... <br> <br>
 							
 							Unless the small chance where the question "would you like to restart the day?" appears. 
@@ -214,11 +236,10 @@
 
 						<p style="font-size: 1.8vh;">
 							The weightlifter table, or gymbro as we often called him, is a distraction module ment to disrupt the players focus. 
-							Aside from nagging on the player to help him out on his leg day, he will also steal the players in-game headset. <br> <br>
+							Aside from nagging on the player to help him out on his leg day, he will steal the players in-game headset. <br> <br>
 
-							To make gymbro work, I've had to work with animation blueprints, <a class="inline-credits" href="">Viktors</a> sound system, sound cues, etc. 
+							To make gymbro work, I've had to work with animation blueprints, the groups own sound system, sound cues, etc. 
 							Which I've learned a lot about Unreals built in systems, instead of just working with C++.
-z§W	
 						</p>
 
 					</div>
@@ -230,16 +251,16 @@ z§W
 						<p class="small-text"> Yes/No explosion module</p>
 
 						<img class="accordion-image" src="../css/pictures/closed-ai.png" alt="Closed AI" onclick="enlargeImage(this)" style="height: 24vh; width: auto;"/>
-						<p class="small-text" style="margin-bottom: 30vh;"> Closed AI</p>
+						<p class="small-text"> Closed AI</p>
 
-						<img class="accordion-image" src="../css/pictures/gymbro.png" alt="Weightlifter table" onclick="enlargeImage(this)" style="height: 24vh; width: auto;"/>
+						<img class="accordion-image" src="../css/pictures/gymbro.png" alt="Weightlifter table" onclick="enlargeImage(this)" style="height: 24vh; width: auto;" id="GymBro"/>
 						<p class="small-text"> Weightlifter table</p>
 
 					</div>
 				</div>
 			</details>
 
-			<details>
+			<!-- <details>
 				<summary>
 					UX
 					<p class="open-indicator">
@@ -249,7 +270,7 @@ z§W
 				<div>
 					I did shit
 				</div>
-			</details>
+			</details> -->
 
 			<details>
 				<summary>
@@ -259,10 +280,10 @@ z§W
 					</p>
 				</summary>
 				<div class="sides" >
-					<div class="left-side" style="justify-content: start;">
+					<div class="left-side" >
 						<h3>Tipping water shader</h3>
 
-						<p>
+						<p style="font-size: 1.8vh;">
 							As a small last minute detail for the game, we wanted to add coffee to some of our coffee cups.
 							For that we needed some shaders that would keep the coffee plane to the world.   <br> <br>
 
