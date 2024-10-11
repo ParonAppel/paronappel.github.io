@@ -1,5 +1,6 @@
 
 const hideTopDistance = 100;
+var isMenuVisible = false;
 
 function hideScroll(){
     const topButton = document.getElementById("topButton");
@@ -53,24 +54,24 @@ function discoMode() {
 function showMenu() {
 
   var menu = document.getElementById("menuItems");
-  var menuItems = menu.children;
 
-  if (menu.style.display === "block") {
+  menu.classList.remove('animate', 'animate-reverse');
 
-    menu.style.display = "none";
-    menu.style.animation ="buttonShow 2s normal reverse linear";
+  setTimeout(() => {
+    if (isMenuVisible) {
+      // menu.classList.remove('animate');
+      menu.classList.add('animate-reverse');
+      // menu.style.display = "none";
 
-  } else {
+    } else {
+      // menu.style.display = "block";
+      // menu.classList.remove('animate-reverse');
+      menu.classList.add('animate');
+    }	
 
-    menu.style.display = "block";
+    isMenuVisible = !isMenuVisible;
+  }, 10); 
 
-    for (var i = 0; i < menuItems.length; i++) {
-      console.log(menuItems[i]);
-      menuItems[i].style.animation ="buttonShow 0.5s normal linear " + (i * 0.5) + "s"; 
-      menuItems[i].classList.add("visible");
-    }
-    
-  }	
 }
 
 window.addEventListener("scroll", hideScroll);
