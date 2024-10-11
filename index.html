@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang=sv>
 <head>
+
 	<title>Isabella Norström</title>
 	<meta charset=utf-8>
-	<link rel="stylesheet" type="text/css" media="screen and (min-width: 1080px)" href="css\index_style.css">
-	<link rel="stylesheet" type="text/css" media="screen and (max-width: 1080px)" href="css\index_style_mobile.css">
-	<style>
-	
-		@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
-	
-	</style>
-	
-	<script>
-	
-		function menuToggle() {
-			var x = document.getElementById("menuItems");
-			if (x.style.display === "block") {
-				x.style.display = "none";
-			} else {
-				x.style.display = "block";
-			}		
-		}
-		
-	</script>
+	<link rel="stylesheet" href="CSS/basics_style.css">
+    <script src="header.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+    </style>
 </head>
-<body>
+<body id="body">
+
 	<header>
 		<nav>
-			<a class="homeButton" href="index.html">
-				ParonAppel
-			</a>
-			<div id="menuItems">
-				
-				<div id="menus">
-					<ul>
-						<li><a class="active" href="index.html"> Home</a></li>
-						<li><a href="about.html"> About</a></li>
-						<li><a href="portfolio.html"> Portfolio</a></li>
-						<li><a href="other/Isabella-Norström-CV.pdf" target="_blank"> CV</a></li>
-					</ul>	
-				</div>
-				
-				<div id="contact">
-					<div class="iconBox">
-						<a class="icon" href="https://www.linkedin.com/in/isanor" target="_blank"> 
-							<img src="css\icons\linkedin-rollover.png" class="iconImg" alt="LinkedIn">
-							<img src="css\icons\linkedin.png" class="iconImg iconImgHover" alt="LinkedIn">
-						</a> 		
-					</div>
-					
-					<div class="iconBox">
-						<a class="icon" href="https://github.com/ParonAppel" target="_blank"> 	
-							<img src="css\icons\github-sign-rollover.png" class="iconImg" alt="GitHub">
-							<img src="css\icons\github-sign.png" class="iconImg iconImgHover" alt="GitHub">
-						</a> 		
-					</div>
-					
-					<div class="iconBox">
-						<a class="icon" href="https://portal.playgroundsquad.com/studenter/Isabella-Norstrom/" target="_blank"> 
-							<img src="css\icons\PSQicon-rollover.png" class="iconImg" alt="PSQ">
-							<img src="css\icons\PSQicon.png" class="iconImg iconImgHover" alt="PSQ">
-						</a> 		
-					</div>
-					
-					<div class="iconBox">
-						<a class="icon" href="mailto: i.norstrom@live.se" target="_blank"> 
-							<img src="css\icons\email-rollover.png" class="iconImg" alt="Email">
-							<img src="css\icons\email.png" class="iconImg iconImgHover" alt="Email">	
-						</a> 		
-					</div>
-				</div>
-			</div>
+            <!-- social media buttons -->
+             <div id="socialMediaButtons">
 
-			<a href="javascript:void(0);" class="menuToggle" onclick="menuToggle()">
-				<img src="css/icons/three-bars.png">
-			</a>
-			
+                <div class="headerButton">
+                    <a href="https://github.com/ParonAppel" target="_blank" class="headerButtonContent"> 	
+                        <img src="Icons/icon_github.png" class="headerButtonImg" alt="GitHub">
+                    </a> 	
+                </div>
+    
+                <div class="headerButton">
+                    <a href="https://www.linkedin.com/in/isanor" target="_blank" class="headerButtonContent"> 	
+                        <img src="Icons/icon_linkedin.png" class="headerButtonImg" alt="LinkedIn">
+                    </a> 	
+                </div>
+
+                <div class="headerButton">
+                    <a class="headerButtonContent" onclick="discoMode()"> 	
+                        <img src="Icons/icon_www.png" class="headerButtonImg" alt="hehe">
+                    </a> 	
+                </div>
+                
+             </div>
+            
+            <!-- scroll to top button -->
+            <div class="headerButton" id="topButton" onclick="scrollToTop()">
+                <a class="headerButtonContent"> 	
+                    <img src="Icons/icon_toparrow.png" class="headerButtonImg" alt="Top">
+                </a> 	
+            </div>
+
+             <!-- menu button -->
+              <div  id="menu"> 
+                <div class="headerButton">
+                    <a  class="headerButtonContent topLeft" onclick="showMenu()"> 	
+                        <img src="Icons/icon_menu.png" class="headerButtonImg" alt="Menu">
+                    </a>
+                </div>
+    
+                <ul id="menuItems" style="display: none;">
+                    <li id="menuItem"><a class="headerButton menuElement" href="Index.html#top" onclick="showMenu()"> Start</a></li>
+                    <li id="menuItem"><a class="headerButton menuElement" href="Index.html#projects" onclick="showMenu()"> Portfolio</a></li>
+                    <li id="menuItem"><a class="headerButton menuElement" href="Index.html#about" onclick="showMenu()"> About</a></li>
+                    <li id="menuItem"><a class="headerButton menuElement" href="other/Isabella-Norström-CV.pdf" target="_blank" onclick="showMenu()"> CV</a></li>
+                </ul>
+              </div>
+            
 		</nav>
 	</header>
 	
 	<main>
-		<section id="top">		
-	
-				<img src="css\pictures\bigbackgroundpixel.png" class="bigImg" alt="Pixel Art">
-				
-				<h1>Isabella Norström</h1>
-				<p style="margin: 0.5vh; margin-bottom: 3vh;"> Aspiring UI programmer @ PSQ </p>
-					
-				<div class="buttonContainer">
-					<a class="fancyButton" href="about.html" > About Me </a>
-				</div>  
-				
-		</section>	
+		<section id="top">
+            <p style="font-size: 64px; margin-left: 10%;"> 
+                  HELLO THERE! 
+            </p>
+            <p style="font-size: 48px; margin-left: 10%; margin-top: 0;">
+                 I'm Isabella, a game programmer <br>specialized in UI @ Section 9 Interactive
+            </p>
+            <p style="font-size: 48px; margin-left: 10%; margin-top: 0;">
+                Check out my portfolio below!
+           </p>
+           <div class="headerButton" style="margin-left: 10%; width: calc(15vh);" onclick="scrollToProjects()">
+                <a class="headerButtonContent"> 	
+                    <img src="Icons/icon_toparrow.png" class="headerButtonImg upsideDown" alt="projects">
+                </a>
+            </div>     
+        </section>
+
+        <div class="divider"></div>
+        
+        <section id="projects">
+            <p> projects</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="about">
+            <p> about</p>
+        </section>
     </main>	
 
 </body>
