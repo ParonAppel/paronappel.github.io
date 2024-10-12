@@ -11,19 +11,23 @@
 
     --border_size: 0.15vw;
 }
+
+html {
+
+    scroll-behavior: smooth;
+
+}
   
 body {
 
     font-family: "Pixelify Sans", sans-serif; 
 	font-weight:normal;
     text-align: left;
-    scroll-behavior: smooth;
     display: flex;
     justify-content: center;
     background-color: var(--background);
     padding: 0;
     margin: 0;
-    
 }
 
 header {
@@ -127,6 +131,13 @@ header {
     padding-bottom: 1vh;
     opacity: 0;
     transform: translateY(-4vh);
+    pointer-events: none;
+}
+
+#menuImage {
+
+    transition: 0.2s;
+
 }
 
 @keyframes buttonShow {
@@ -161,6 +172,7 @@ header {
    
     border-bottom: var(--border_size) dashed var( --primary);
     width: 100%;
+    pointer-events: inherit;
 }
 
 a {

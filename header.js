@@ -54,18 +54,19 @@ function discoMode() {
 function showMenu() {
 
   var menu = document.getElementById("menuItems");
-
+  var menuImage = document.getElementById("menuImage");
   menu.classList.remove('animate', 'animate-reverse');
+
+  menuImage.classList.toggle('upsideDown');
 
   setTimeout(() => {
     if (isMenuVisible) {
-      // menu.classList.remove('animate');
-      menu.classList.add('animate-reverse');
-      // menu.style.display = "none";
 
+      menu.style.pointerEvents = "none";
+      menu.classList.add('animate-reverse');
     } else {
-      // menu.style.display = "block";
-      // menu.classList.remove('animate-reverse');
+
+      menu.style.pointerEvents = "inital";
       menu.classList.add('animate');
     }	
 
