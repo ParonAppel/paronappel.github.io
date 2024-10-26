@@ -1,7 +1,7 @@
 {
     "projects": [
 
-        {"title": "Alien Intern", "desc": "The second game project at PlaygroundSquad, a PSVR2 game made in Unreal Engine 5", "image": "./Icons/icons_alienintern.png"}
+        {"title": "Alien Intern", "desc": "The second game project at PlaygroundSquad, a PSVR2 game made in Unreal Engine 5", "image": "./Icons/icon_alienintern.png"}
 
     ]
 }
