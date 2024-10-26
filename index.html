@@ -9,6 +9,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
     </style>
 </head>
 <body id="body">
@@ -85,10 +86,34 @@
         <div class="divider"></div>
         
         <section id="projects">
-            <p> projects</p>
+
+            <div style ="position: relative; text-align: center; margin-bottom: 5vh;">
+                <img src="Theme/projects_title.png" alt=""style="height: 12vh; image-rendering: pixelated; image-rendering: -moz-crisp-edges; image-rendering: crisp-edges;">
+                <p class="overlayText"> INVENTORY </p>
+            </div>
+
+            <div class="sides">
+                <div id="projectsIcons" >
+                    <div class="frame" onclick="setProject('Alien Intern')"></div>
+                    <div class="frame" onclick="setProject('test2')"></div>
+                    <div class="frame" onclick="setProject('test3')"></div>
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+                    <div class="frame"></div>
+    
+                </div>
+                <div id="projectsDisplay">
+                    <div class="big-frame">
+                        <img id="project-image" src="Icons/icon_github.png" style="height: 50%;">
+                        <p id="project-title"> Project Title</p>
+                        <p id="project-description"> Project Descpription</p>
+                    </div>
+                </div>
+            </div>
+            
         </section>
 
-        <div class="divider"></div>
+        <!-- <div class="divider"></div> -->
 
         <section id="about">
             <p> about</p>

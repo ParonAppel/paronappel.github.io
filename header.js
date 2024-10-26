@@ -2,6 +2,23 @@
 const hideTopDistance = 100;
 var isMenuVisible = false;
 
+var projects;
+
+async function initProjectsData() { 
+  const requestURL =
+  "projects.json";
+  const request = new Request(requestURL);
+  
+  const response = await fetch(request);
+  const projectsData = await response.json();
+
+  projects = projectsData.members;
+
+  console.log("projects");
+}
+
+initProjectsData();
+
 function hideScroll(){
     const topButton = document.getElementById("topButton");
     const socialButtons = document.getElementById("socialMediaButtons");
@@ -73,6 +90,19 @@ function showMenu() {
     isMenuVisible = !isMenuVisible;
   }, 10); 
 
+}
+
+function setProject(nameOfProject) {
+
+  var desc = document.getElementById("project-description");
+
+  for(const project of projects) 
+  {
+    if(project.title = nameOfProject) 
+    {
+      desc.innerText = project.desc;
+    }
+  }
 }
 
 window.addEventListener("scroll", hideScroll);
