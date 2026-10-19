@@ -2,9 +2,9 @@
 
     /* color palette */
     --primary: #1a1917;
-    
+
     --secondary: #fdf2df;
-    
+
     --background: #e0cba6;
 
     --iconbox_size: 5vh;
@@ -17,21 +17,23 @@ html {
     scroll-behavior: smooth;
 
 }
-  
+
 body {
 
-    font-family: "Pixelify Sans", sans-serif; 
-	font-weight:normal;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: normal;
     text-align: left;
     display: flex;
     justify-content: center;
     background-color: var(--background);
     padding: 0;
     margin: 0;
+
+    color: var(--primary);
 }
 
 header {
-  
+
     position: fixed;
     margin: 0;
     padding: 0;
@@ -47,14 +49,14 @@ header {
     padding: 0px;
     margin-left: 1vw;
     margin-top: 1vh;
-	
-	height: var(--iconbox_size);
-	width:	var(--iconbox_size);
 
-    background-color:var(--background);
-	border: var(--border_size) dashed var( --primary);
+    height: var(--iconbox_size);
+    width: var(--iconbox_size);
 
-    box-shadow: 6px 6px var( --primary );
+    background-color: var(--background);
+    border: var(--border_size) dashed var(--primary);
+
+    box-shadow: 6px 6px var(--primary);
 
     pointer-events: initial;
 
@@ -63,11 +65,11 @@ header {
 
 .headerButtonContent {
 
-    width: 100%; 
+    width: 100%;
     height: 100%;
     display: grid;
-    justify-content: center; 
-	align-content: center; 
+    justify-content: center;
+    align-content: center;
     object-position: center;
 }
 
@@ -75,18 +77,18 @@ header {
 
     transform: scale(1.1);
 
-    box-shadow: 8px 8px var( --primary );
+    box-shadow: 8px 8px var(--primary);
 
     cursor: pointer;
 
     transition: all 200ms ease-in-out;
 }
 
-.headerButtonImg{
+.headerButtonImg {
 
     margin: 0px;
-    height: calc(var(--iconbox_size) / 1.5 );
-	width:	calc(var(--iconbox_size) / 1.5 );
+    height: calc(var(--iconbox_size) / 1.5);
+    width: calc(var(--iconbox_size) / 1.5);
     object-fit: fill;
     object-position: center;
 
@@ -98,7 +100,7 @@ header {
 #topButton {
     position: absolute;
     bottom: 5vh;
-    right: 2vw; 
+    right: 2vw;
 }
 
 #socialMediaButtons {
@@ -107,7 +109,7 @@ header {
     flex-direction: row;
     position: absolute;
     right: 2vw;
-    top: 0; 
+    top: 0;
 }
 
 #menu {
@@ -145,38 +147,61 @@ header {
         transform: translateY(-4vh);
         pointer-events: none;
         opacity: 0;
-      }
-      100% {
+    }
+
+    100% {
         transform: translateY(0);
         pointer-events: initial;
         opacity: 1;
-      }
+    }
 }
 
-.animate #menuItem:nth-child(1){ animation: buttonShow 0.3s steps(5, end) forwards; }
-.animate #menuItem:nth-child(2) { animation: buttonShow 0.3s steps(5, end) forwards 0.3s; }
-.animate #menuItem:nth-child(3) { animation: buttonShow 0.3s steps(5, end) forwards 0.6s; }
-.animate #menuItem:nth-child(4) { animation: buttonShow 0.3s steps(5, end) forwards  0.9s;}
+.animate #menuItem:nth-child(1) {
+    animation: buttonShow 0.3s steps(5, end) forwards;
+}
 
-.animate-reverse #menuItem:nth-child(1){ animation: buttonShow 0.3s steps(5, end) reverse; }
-.animate-reverse #menuItem:nth-child(2) { animation: buttonShow 0.3s steps(5, end) reverse;  }
-.animate-reverse #menuItem:nth-child(3) { animation: buttonShow 0.3s steps(5, end) reverse;  }
-.animate-reverse #menuItem:nth-child(4) { animation: buttonShow 0.3s steps(5, end) reverse;}
-  
-  
+.animate #menuItem:nth-child(2) {
+    animation: buttonShow 0.3s steps(5, end) forwards 0.3s;
+}
+
+.animate #menuItem:nth-child(3) {
+    animation: buttonShow 0.3s steps(5, end) forwards 0.6s;
+}
+
+.animate #menuItem:nth-child(4) {
+    animation: buttonShow 0.3s steps(5, end) forwards 0.9s;
+}
+
+.animate-reverse #menuItem:nth-child(1) {
+    animation: buttonShow 0.3s steps(5, end) reverse;
+}
+
+.animate-reverse #menuItem:nth-child(2) {
+    animation: buttonShow 0.3s steps(5, end) reverse;
+}
+
+.animate-reverse #menuItem:nth-child(3) {
+    animation: buttonShow 0.3s steps(5, end) reverse;
+}
+
+.animate-reverse #menuItem:nth-child(4) {
+    animation: buttonShow 0.3s steps(5, end) reverse;
+}
+
+
 .menuElement {
     font-size: 4vh;
     text-decoration: none;
 
     padding: 0.5vh;
-   
-    border-bottom: var(--border_size) dashed var( --primary);
+
+    border-bottom: var(--border_size) dashed var(--primary);
     width: 100%;
     pointer-events: inherit;
 }
 
 a {
-    color: var( --primary);
+    color: var(--primary);
 }
 
 main {
@@ -206,7 +231,7 @@ section {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-   
+
 }
 
 
@@ -216,10 +241,8 @@ section {
     flex-direction: column;
 
     background-color: var(--primary);
-    justify-content: center;
-
     width: 100%;
-   
+
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -231,6 +254,9 @@ section {
     top: 0;
     flex-direction: column;
 
+    align-items: center;
+    text-align: center;
+
     background-image: url("../Theme/background_about.png");
     background-repeat: no-repeat;
     background-position: right;
@@ -238,7 +264,18 @@ section {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-   
+
+}
+
+.basic-frame {
+
+    background-color: var(--background);
+    border: var(--border_size) dashed var(--primary);
+
+    box-shadow: 6px 6px var(--primary);
+
+    width: auto;
+    height: auto;
 }
 
 .upsideDown {
@@ -248,23 +285,37 @@ section {
 
 .topLeft {
 
-    width: var(--iconbox_size); 
+    width: var(--iconbox_size);
     height: var(--iconbox_size);
     transform: translate(-var(--iconbox_size), -var(--iconbox_size));
     padding-left: calc(var(--iconbox_size) /8 + 0.25vh);
     padding-top: calc(var(--iconbox_size) /8 + 0.25vh);
     display: grid;
-    justify-content: left; 
-	align-content: start;
-    
+    justify-content: left;
+    align-content: start;
+
 }
 
 @keyframes disco {
-    0%   {background-color: #ff5959; }
-    25%  {background-color: #fff959; }
-    50%  {background-color: #596fff; }
-    75%  {background-color: #61ff59; }
-    100% {background-color: #ff5959; }
+    0% {
+        background-color: #ff5959;
+    }
+
+    25% {
+        background-color: #fff959;
+    }
+
+    50% {
+        background-color: #596fff;
+    }
+
+    75% {
+        background-color: #61ff59;
+    }
+
+    100% {
+        background-color: #ff5959;
+    }
 }
 
 .discoMode {
@@ -303,22 +354,47 @@ section {
 
     width: 10vh;
     height: 10vh;
+
+    box-sizing: border-box;
+    padding: 1vh;
 }
-
-
 
 .frame:hover {
     transform: scale(1.1);
 }
 
+.frameLong {
+
+    margin: 2vh;
+    background-image: url("../Theme/frame-long.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    width: 20vh;
+    height: 10vh;
+
+    box-sizing: border-box;
+    padding: 1vh;
+}
+
+.frameLong:hover {
+    transform: scale(1.1);
+}
+
+
+
 .sides {
     display: flex;
-	flex-direction: row;
+    flex-direction: row;
 }
 
 .overlayText {
     position: absolute;
-    top: 42.5%; 
+    top: 42.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
@@ -331,7 +407,6 @@ section {
 #projectsIcons {
     width: 50%;
     height: auto;
-    margin-right: 2vw;
 
     display: flex;
     flex-direction: row;
@@ -343,8 +418,11 @@ section {
 
 #projectsDisplay {
 
-    width: 50%; 
-    margin-left: 2vw;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 
 }
 
@@ -358,8 +436,8 @@ section {
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
 
-    width: calc((70vh/4)*3);
-    height: 70vh;
+    width: calc((60vh/4)*3);
+    height: 60vh;
     box-sizing: border-box;
     padding: 3vh;
 
@@ -369,27 +447,28 @@ section {
     color: var(--background);
     text-align: left;
 }
+
 /* scroll bar */
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: var(--background);
     opacity: 0;
-    border: var(--border_size) dashed var( --primary);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+    border: var(--border_size) dashed var(--primary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: var(--primary);
-    border: var(--border_size) dashed var( --secondary);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+    border: var(--border_size) dashed var(--secondary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
-  }
+}

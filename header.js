@@ -6,15 +6,14 @@ var projects;
 
 async function initProjectsData() { 
   const requestURL =
-  "projects.json";
+  "https://paronappel.github.io/projects.json";
   const request = new Request(requestURL);
   
   const response = await fetch(request);
   const projectsData = await response.json();
 
-  projects = projectsData.members;
-
-  console.log("projects");
+  projects = projectsData.projects;
+  setProject('Alien Intern');
 }
 
 initProjectsData();
@@ -95,12 +94,18 @@ function showMenu() {
 function setProject(nameOfProject) {
 
   var desc = document.getElementById("project-description");
+  var title = document.getElementById("project-title");
+  var image = document.getElementById("project-image");
+  var button = document.getElementById("project-button");
 
   for(const project of projects) 
   {
-    if(project.title = nameOfProject) 
+    if(project.title == nameOfProject) 
     {
+      title.innerText = project.title;
       desc.innerText = project.desc;
+      image.src = project.image;
+      button.setAttribute("href", project.url);
     }
   }
 }
