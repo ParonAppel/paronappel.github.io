@@ -91,6 +91,8 @@ header {
     list-style-type: none;
     z-index: 40;
     transform-origin: top left;
+
+    a { font-size: 28px ;}
 }
 
 #menuItem {
@@ -183,7 +185,6 @@ header {
 }
 
 .upsideDown {
-
     transform: rotate(180deg);
 }
 
