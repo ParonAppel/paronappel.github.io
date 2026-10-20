@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 18px/1.65 var(--font-body);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+}
+
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.2; }
+a { color: var(--accent); }
+img { max-width: 100%; height: auto; }
