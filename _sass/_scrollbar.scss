@@ -1,0 +1,24 @@
+/* scroll bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--background);
+    opacity: 0;
+    border: var(--border_size) dashed var(--primary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border: var(--border_size) dashed var(--secondary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}

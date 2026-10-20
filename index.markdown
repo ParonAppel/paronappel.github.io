@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: index
 ---
 
 # Hi, I'm Isabella
@@ -10,6 +10,10 @@ Short intro about what you do.
 <div class="card-grid">
   {% for project in site.projects %}
     <a class="card" href="{{ project.url | relative_url }}">
+      {% if project.image %}
+      <img src="{{ project.image | relative_url }}" alt="">
+      {% endif %}
+
       <h3>{{ project.title }}</h3>
       <p>{{ project.summary }}</p>
 

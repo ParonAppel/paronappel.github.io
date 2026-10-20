@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<main>
+		<section id="indexTop">
+            <p style="font-size: 64px; margin-left: 10%;"> 
+                  HELLO THERE! 
+            </p>
+            <p style="font-size: 48px; margin-left: 10%; margin-top: 0;">
+                 I'm Isabella, a game programmer <br>specialized in UI @ Section 9 Interactive
+            </p>
+            <p style="font-size: 48px; margin-left: 10%; margin-top: 0;">
+                Check out my portfolio below!
+           </p>
+           <div class="headerButton" style="margin-left: 10%; width: calc(15vh);" onclick="scrollToProjects()">
+                <a class="headerButtonContent"> 	
+                    <img src="assets/theme/icon_toparrow.png" class="headerButtonImg upsideDown" alt="top arrow">
+                </a>
+            </div>     
+    </section>
+
+        <div class="indexDivider"></div>
+        
+        <section id="projects">
+
+            <div style ="position: relative; text-align: center; margin-bottom: 7vh;">
+                <p class="overlayText"> PROJECTS </p>
+            </div>
+
+            <article class="project">
+            {{ content }}
+            </article>
+            
+        </section>    		
+</main>	
+
+
+
+

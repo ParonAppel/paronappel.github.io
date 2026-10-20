@@ -1,7 +1,41 @@
-<header class="site-header">
-  <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-  <nav>
-    <a href="{{ '/#projects' | relative_url }}">Projects</a>
-    <a href="{{ '/about/' | relative_url }}">About</a>
-  </nav>
+<header>
+  <!-- menu button -->
+  <div  id="menu"> 
+    <div class="headerButton">
+      <a  class="headerButtonContent topLeft" onclick="showMenu()"> 
+        <img src="assets/theme/icon_toparrow.png" id="menuImage" class="headerButtonImg upsideDown" alt="Menu">
+      </a>
+    </div>
+    
+    <ul id="menuItems" style="display: block;">
+        <li id="menuItem"><a class="headerButton menuElement" href="Index.html#top" onclick="showMenu()"> Start</a></li>
+        <li id="menuItem"><a class="headerButton menuElement" href="Index.html#projects" onclick="showMenu()"> Portfolio</a></li>
+        <li id="menuItem"><a class="headerButton menuElement" href="Index.html#about" onclick="showMenu()"> About</a></li>
+        <li id="menuItem"><a class="headerButton menuElement" href="other/Isabella-Norström-CV.pdf" target="_blank" onclick="showMenu()"> CV</a></li>
+      </ul>
+    </div>
+
+    <!-- social media buttons -->
+    <div id="socialMediaButtons">
+
+      <div class="headerButton">
+         <a href="https://github.com/ParonAppel" target="_blank" class="headerButtonContent"> 	
+          <img src="assets/theme/icon_github.png" class="headerButtonImg" alt="GitHub">
+        </a> 	
+      </div>
+    
+      <div class="headerButton">
+        <a href="https://www.linkedin.com/in/isanor" target="_blank" class="headerButtonContent"> 	
+          <img src="assets/theme/icon_linkedin.png" class="headerButtonImg" alt="LinkedIn">
+        </a> 	
+      </div>
+                
+    </div>
+
+    <!-- scroll to top button -->
+    <div class="headerButton" id="topButton" onclick="scrollToTop()">
+      <a class="headerButtonContent"> 	
+         <img src="assets/theme/icon_toparrow.png" class="headerButtonImg" alt="Top">
+            </a> 	
+    </div>
 </header>
