@@ -1,13 +1,10 @@
 header {
-
-    position: fixed;
     margin: 0;
     padding: 0;
     z-index: 50;
     height: 100%;
     width: 100%;
     pointer-events: none;
-
 }
 
 .headerButton {
@@ -66,7 +63,7 @@ header {
 }
 
 #topButton {
-    position: absolute;
+    position: fixed;
     bottom: 5vh;
     right: 2vw;
 }
@@ -75,7 +72,7 @@ header {
 
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: fixed;
     right: 2vw;
     top: 0;
 }

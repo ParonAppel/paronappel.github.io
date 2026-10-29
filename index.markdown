@@ -2,10 +2,9 @@
 layout: index
 ---
 
-# Hi, I'm Isabella
-Short intro about what you do.
+# PORTFOLIO
+A collection of personal and professional projects
 
-<h2 id="projects">Projects</h2>
 {::nomarkdown}
 <div class="card-grid">
   {% for project in site.projects %}

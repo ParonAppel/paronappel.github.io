@@ -72,4 +72,4 @@ function showMenu() {
 
 window.addEventListener("scroll", hideScroll);
 hideScroll();
-showMenu();
+// showMenu();
