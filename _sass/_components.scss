@@ -58,3 +58,18 @@
   }
 }
 
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;   
+    align-items: start;           
+    gap: 1.25rem;
+  }
+
+  .card {
+    height: auto;
+    p { flex-grow: 0; }          
+  }
+
+  .tags { margin-top: .75rem; }
+}
+
