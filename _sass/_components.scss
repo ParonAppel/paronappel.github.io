@@ -23,6 +23,7 @@
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: center center;
   border: calc(var(--border_size)/2) solid var(--primary);
   margin-bottom: .5rem;
 
