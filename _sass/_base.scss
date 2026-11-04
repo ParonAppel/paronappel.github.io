@@ -26,6 +26,16 @@ main {
  width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: var(--primary);
+
+    a::hover {
+        text-decoration: underline;
+    }
+
+}
+
 footer {
     color: var(--primary);
     border-top: var(--border_size) dashed var(--primary);
@@ -48,14 +58,10 @@ footer {
         list-style-type: none;
         padding-left: 8px;
         padding-right: 8px;
-    }   
-
-    a {
-        color: var(--primary);
-        text-decoration: none;
-    }
-    
+    }       
 }
+
+
 
 section {
 
@@ -94,5 +100,10 @@ section {
 
         #indexTopText {align-items: center; padding-top: 0px;}
     }
+}
+
+.project {
+    width: var(--page_width);
+    margin: 5vh auto 5vh;
 }
 

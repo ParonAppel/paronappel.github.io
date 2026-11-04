@@ -2,7 +2,23 @@
 layout: default
 ---
 <article class="project">
+
+  <a href="{{ '/#projects' | relative_url }}" style="display: flex; flex-direction: row;">
+    <img src="{{'assets/theme/icon_toparrow_bright.png' | relative_url }}" style="transform: rotate(-90deg); object-fit: contain;" alt="top arrow">
+    <p>All projects</p>
+  </a>
+
   <h1>{{ page.title }}</h1>
-  <p class="meta">{{ page.year }} · {{ page.stack | join: ", " }}</p>
+  
+  <p>{{ page.summary }}</p>
+  {% if page.stack %}
+    <ul class="tags">
+      {% for tech in page.stack %}
+        <li>{{ tech }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+
   {{ content }}
 </article>
