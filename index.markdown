@@ -13,7 +13,7 @@ A collection of personal and professional projects
       <img src="{{ project.image | relative_url }}" alt="">
       {% endif %}
 
-      <h3>{{ project.title }}</h3>
+      <h2>{{ project.title }}</h2>
       <p>{{ project.summary }}</p>
 
       {% if project.stack %}
