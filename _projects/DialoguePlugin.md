@@ -7,6 +7,7 @@ layout: portfoliopage
 image: /assets/projectstuff/DialoguePlugin/Icon_Dialogue.png
 ---
 
+## This page is still under construction!
 
 # Summary
 
@@ -14,15 +15,17 @@ This project was created with the main intention of me teaching myself how to do
 
 The reasoning behind making it a dialogue plugin was that it was the most clear-cut idea for how having access to a node graph could aid in content creation. Being able to visualize a branching narrative makes it easier to create.
 
- 
+ It is however a plugin I have ended up having use of in **Game Jams** and in Aurora Arts game [**Fae & Fauna**](https://store.steampowered.com/app/2363200/Fae_Fauna/){:target="_blank" rel="noopener noreferrer"} their dialogue system is based on this plugin.
+
+
 <br>
 
-<details markdown="1">
-<summary>Technical breakdown</summary>
+# The Research
 
-Normal **Markdown** works in here, like lists:
+-
 
-- Custom node graph
-- Runtime executor
+<br>
 
-</details>
+# The making of
+
+-
