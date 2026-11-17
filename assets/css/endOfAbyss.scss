@@ -1,0 +1,96 @@
+---
+---
+@font-face {
+  font-family: "Saira";
+  src: url("/assets/fonts/Saira-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;   // lets you use any weight
+  font-display: swap;
+}
+
+
+$px: 4px;                 // size of one art pixel
+$tile: $px * 2;           // 2x2 dither tile
+$rows: 6;                 // total height of each fade, in dither rows
+
+$dither: (
+  conic-gradient(var(--c) 25%, transparent 0),                                      // 25% filled
+  conic-gradient(var(--c) 25%, transparent 0 50%, var(--c) 0 75%, transparent 0),   // 50% checker
+  conic-gradient(transparent 25%, var(--c) 0)                                       // 75% filled
+);
+
+.project-content {
+
+  // Variables
+  --eoa_background: #061419;
+  --primary: #8AE5FE;
+  --secondary: #D0F5FF;
+
+  // Background
+  position: relative;
+  isolation: isolate;
+  padding-block: 4rem; 
+
+  &::before {
+
+    --c: var(--eoa_background);
+
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -100vmax;
+    right: -100vmax;
+    image-rendering: pixelated;
+
+    $layers: ();
+
+    // Top fade: sparse -> dense, each density repeated for $rows / 3 rows
+    @for $i from 0 to $rows {
+      $pattern: nth($dither, floor($i / ($rows / 3)) + 1);
+      $layers: append($layers, #{$pattern} 0 #{$i * $tile} / #{$tile} #{$tile} repeat-x, comma);
+    }
+
+    // Bottom fade: dense -> sparse (i = 0 is the bottom-most row)
+    @for $i from 0 to $rows {
+      $pattern: nth($dither, floor($i / ($rows / 3)) + 1);
+      $layers: append($layers, #{$pattern} 0 calc(100% - #{$i * $tile}) / #{$tile} #{$tile} repeat-x, comma);
+    }
+
+    // Solid middle
+    $layers: append($layers, linear-gradient(var(--c), var(--c)) 0 #{$rows * $tile} / 100% calc(100% - #{$rows * $tile * 2}) no-repeat, comma);
+
+    background: $layers;
+  }
+
+  clip-path: inset(0 -100vmax);
+
+  // Elements
+  font-family: "Saira", sans-serif;
+
+  p {
+    color: var(--primary);
+    text-shadow:
+    0 0 6px  color-mix(in srgb, var(--primary) 60%, transparent);
+  }
+
+  h1 {
+    text-shadow:
+    0 0 4px  color-mix(in srgb, var(--secondary) 60%, transparent),
+    0 0 12px color-mix(in srgb, var(--primary) 60%, transparent);
+  }
+
+  h2 {
+     text-shadow:
+    0 0 4px  color-mix(in srgb, var(--primary) 60%, transparent),
+    0 0 12px color-mix(in srgb, var(--primary) 60%, transparent);
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: 0;
+    border-bottom: var(--border_size) solid var(--primary);
+  }
+}
+
+main { overflow-x: clip; }
