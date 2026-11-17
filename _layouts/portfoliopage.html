@@ -8,18 +8,62 @@ layout: default
     <p>All projects</p>
   </a>
 
-  <h1>{{ page.title }}</h1>
+  <div id="projectSummary">
+
+    <!-- Summary -->
+    <div class="summary">
+      <h1 style="margin-block-start: 0em;">{{ page.title }}</h1>
+
+      <ul>
+        {% if page.platform %}
+        <li><strong>PLATFORMS:</strong> {{ page.platform }}</li>
+        {% endif %}
+
+        {% if page.languages %}
+        <li><strong>LANGUAGES:</strong> {{ page.languages }}</li>
+        {% endif %}
+
+        {% if page.role %}
+        <li><strong>MY ROLE:</strong> {{ page.role }}</li>
+        {% endif %}
+
+        {% if page.duration %}
+        <li><strong>DURATION:</strong> {{ page.duration }}</li>
+        {% endif %}
+
+        </ul>
+
+      {% if page.link %}
+      <div class="headerButton" style="width: calc(15vh); margin: auto 0 0;">
+          <a class="headerButtonContent" href="{{page.link}}" target="_blank"> 	
+             <p>{{ page.link_text }}</p>   
+          </a>
+      </div>  
+      {% endif %}
+    </div>
+
+    <!-- Video/gif/whatever -->
+    {% if page.video || page.banner %}
+    <div class="banner">
+      {% if page.video %}
+
+      {% assign vid = page.video | split: 'youtu.be/' | last | split: 'v=' | last | split: '&' | first | split: '?' | first %}
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ vid }}?rel=0&playsinline=1&iv_load_policy=3"
+        title="{{ page.title }} video"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+      
+      {% elsif page.banner %}
+      <img src="{{ page.banner | relative_url }}" alt="{{ page.banner_alt | default: page.title }}">
+      {% endif %}
+
+    </div>
+    {% endif %}
+  </div>
+
   
-  <p>{{ page.summary }}</p>
-  {% if page.stack %}
-    <ul class="tags">
-      {% for tech in page.stack %}
-        <li>{{ tech }}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-
-  <br><br/>
-
   {{ content }}
 </article>

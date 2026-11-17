@@ -9,8 +9,8 @@ A collection of personal and professional projects
 <div class="card-grid">
   {% for project in site.projects %}
     <a class="card" href="{{ project.url | relative_url }}">
-      {% if project.image %}
-      <img src="{{ project.image | relative_url }}" alt="">
+      {% if project.icon %}
+      <img src="{{ project.icon | relative_url }}" alt="">
       {% endif %}
 
       <h2>{{ project.title }}</h2>
