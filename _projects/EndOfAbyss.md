@@ -62,3 +62,7 @@ One of the most useful things I have gotten to learn during this project
 
 ## Suit Mods
 <br/>
+
+
+
+<script src="{{ '/assets/javascript/staticFX.js' | relative_url }}" defer></script>

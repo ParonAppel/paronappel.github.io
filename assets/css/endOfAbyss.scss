@@ -94,3 +94,17 @@ $dither: (
 }
 
 main { overflow-x: clip; }
+
+.staticFX {
+  position: absolute;
+  z-index: -1;            
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  height: 100%;
+  pointer-events: none;
+  opacity: 100%;    
+  image-rendering: pixelated;
+}
