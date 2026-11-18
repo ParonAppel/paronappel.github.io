@@ -72,4 +72,10 @@ function showMenu() {
 
 window.addEventListener("scroll", hideScroll);
 hideScroll();
+
+document.querySelectorAll('details').forEach(d => {
+  d.addEventListener('toggle', () => {
+    d.querySelectorAll('video[loop]').forEach(v => d.open ? v.play() : v.pause());
+  });
+});
 // showMenu();

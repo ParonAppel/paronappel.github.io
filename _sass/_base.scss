@@ -32,6 +32,11 @@ strong
     font-weight: 700;
 }
 
+figcaption {
+    color: var(--primary);
+    font-size: var(--font_size_details);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -41,7 +46,7 @@ html {
 }
 
 main {
- width: 100%;
+    width: 100%;
 }
 
 a {
@@ -147,5 +152,15 @@ details {
   &[open] summary::after { content: "–"; }
   &[open] summary { border-bottom: calc(var(--border_size) / 2) dashed var(--primary); }
 
-  > :not(summary) { margin-left: 1rem; margin-right: 1rem; }   // padding for the content
+  > :not(summary) { margin-left: 1rem; margin-right: 1rem; } 
+}
+
+.float-right {
+  float: right;
+  width: 40%;
+  margin: 0 0 1rem 1.5rem; 
+}
+
+@media (max-width: 700px) {
+  .float-right { float: none; width: 100%; margin: 1rem 0; }
 }

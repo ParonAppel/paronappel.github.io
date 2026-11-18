@@ -13,9 +13,9 @@ $tile: $px * 2;           // 2x2 dither tile
 $rows: 6;                 // total height of each fade, in dither rows
 
 $dither: (
-  conic-gradient(var(--c) 25%, transparent 0),                                      // 25% filled
-  conic-gradient(var(--c) 25%, transparent 0 50%, var(--c) 0 75%, transparent 0),   // 50% checker
-  conic-gradient(transparent 25%, var(--c) 0)                                       // 75% filled
+  conic-gradient(var(--color) 25%, transparent 0),                                      // 25% filled
+  conic-gradient(var(--color) 25%, transparent 0 50%, var(--color) 0 75%, transparent 0),   // 50% checker
+  conic-gradient(transparent 25%, var(--color) 0)                                       // 75% filled
 );
 
 .project-content {
@@ -24,6 +24,8 @@ $dither: (
   --eoa_background: #061419;
   --primary: #8AE5FE;
   --secondary: #D0F5FF;
+  --accent: #E5FF8A;
+  --darker: #5C99AA;
 
   // Background
   position: relative;
@@ -32,7 +34,7 @@ $dither: (
 
   &::before {
 
-    --c: var(--eoa_background);
+    --color: var(--eoa_background);
 
     content: "";
     position: absolute;
@@ -58,7 +60,7 @@ $dither: (
     }
 
     // Solid middle
-    $layers: append($layers, linear-gradient(var(--c), var(--c)) 0 #{$rows * $tile} / 100% calc(100% - #{$rows * $tile * 2}) no-repeat, comma);
+    $layers: append($layers, linear-gradient(var(--color), var(--color)) 0 #{$rows * $tile} / 100% calc(100% - #{$rows * $tile * 2}) no-repeat, comma);
 
     background: $layers;
   }
@@ -78,12 +80,26 @@ $dither: (
     text-shadow:
     0 0 4px  color-mix(in srgb, var(--secondary) 60%, transparent),
     0 0 12px color-mix(in srgb, var(--primary) 60%, transparent);
+    font-weight: 600;
   }
 
   h2 {
-     text-shadow:
+    text-shadow:
     0 0 4px  color-mix(in srgb, var(--primary) 60%, transparent),
     0 0 12px color-mix(in srgb, var(--primary) 60%, transparent);
+
+    font-weight: 500;
+    clear: both;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  figcaption {
+
+    color: var(--darker);
+    text-shadow: 0 0 6px  color-mix(in srgb, var(--primary) 60%, transparent);
   }
 
   hr {
@@ -91,7 +107,110 @@ $dither: (
     border: 0;
     border-bottom: var(--border_size) solid var(--primary);
   }
+
+  details {
+
+    border: var(--border_size) none var(--primary);
+    margin: 1rem 0;
+
+    display: flow-root;
+
+    summary {
+      position: relative;
+      cursor: pointer;
+      padding: .75rem 1rem;
+      font-weight: bold;
+      list-style: none;       
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      color: var(--background);
+      background: var(--primary);
+
+      box-shadow:
+      0 0 6px  color-mix(in srgb, var(--primary) 60%, transparent),
+      0 0 18px color-mix(in srgb, var(--primary) 35%, transparent),
+      0 0 36px color-mix(in srgb, var(--primary) 15%, transparent);
+
+      text-shadow:
+      0 0 4px  color-mix(in srgb, var(--background) 60%, transparent),
+      0 0 12px color-mix(in srgb, var(--background) 30%, transparent);
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 4px;                   // starts tight, grows outward on hover
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .15s ease, inset .15s ease;
+
+        --width: 2px;
+        --length: 16px;
+
+        background:
+          /* top-left */
+          linear-gradient(var(--accent), var(--accent)) top left     / var(--width) var(--length) no-repeat,
+          linear-gradient(var(--accent), var(--accent)) top left     / var(--length) var(--width) no-repeat,
+          /* top-right */
+          linear-gradient(var(--accent), var(--accent)) top right    / var(--width) var(--length) no-repeat,
+          linear-gradient(var(--accent), var(--accent)) top right    / var(--length) var(--width) no-repeat,
+          /* bottom-left */
+          linear-gradient(var(--accent), var(--accent)) bottom left  / var(--width) var(--length) no-repeat,
+          linear-gradient(var(--accent), var(--accent)) bottom left  / var(--length) var(--width) no-repeat,
+          /* bottom-right */
+          linear-gradient(var(--accent), var(--accent)) bottom right / var(--width) var(--length) no-repeat,
+          linear-gradient(var(--accent), var(--accent)) bottom right / var(--length) var(--width) no-repeat;
+      }
+
+      &::-webkit-details-marker { display: none; }  
+      &::after { content: "+"; }                    
+
+      &:focus-visible::before {       
+        opacity: 1;
+        inset: 0px;
+      }
+    }
+
+    &[open] summary::after { content: "–"; }
+
+    --color: var(--primary);   
+    --width: 2px;              
+    --length: 14px;     
+
+    &[open] {
+      padding-bottom: 1.25rem;   
+
+      background:
+        linear-gradient(var(--color), var(--color)) bottom left  / 100% var(--width) no-repeat,          
+        linear-gradient(var(--color), var(--color)) bottom left  / var(--width) var(--length) no-repeat,    
+        linear-gradient(var(--color), var(--color)) bottom right / var(--width) var(--length) no-repeat;
+
+      background-color: color-mix(in srgb, var(--primary) 8%, transparent);
+    }
+
+    > :not(summary) { margin-left: 1rem; margin-right: 1rem; }  
+  }
+
+  details > video,
+  details > .bracket {
+    display: block;                 // removes the small gap under the video
+    width: calc(100% - 2rem);       // 100% minus the 1rem margin on each side
+    max-width: calc(100% - 2rem);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+
 }
+
+@media (hover: hover) {
+  details > summary:hover::before {
+    opacity: 1;
+    inset: -4px;                 
+  }
+}
+
 
 main { overflow-x: clip; }
 
@@ -107,4 +226,22 @@ main { overflow-x: clip; }
   pointer-events: none;
   opacity: 100%;    
   image-rendering: pixelated;
+}
+
+.bracket {
+  --color: var(--primary);   
+  --width: 2px;              
+  --length: 14px;          
+
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 2px 2px;   
+
+  background:
+    linear-gradient(var(--color), var(--color)) top    left  / 100% var(--width) no-repeat,   // top line
+    linear-gradient(var(--color), var(--color)) bottom left  / 100% var(--width) no-repeat,   // bottom line
+    linear-gradient(var(--color), var(--color)) top    left  / var(--width) var(--length) no-repeat,  // ticks
+    linear-gradient(var(--color), var(--color)) top    right / var(--width) var(--length) no-repeat,
+    linear-gradient(var(--color), var(--color)) bottom left  / var(--width) var(--length) no-repeat,
+    linear-gradient(var(--color), var(--color)) bottom right / var(--width) var(--length) no-repeat;
 }

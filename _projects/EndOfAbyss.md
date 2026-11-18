@@ -29,6 +29,8 @@ My responsiblities during the project has mainly been implementing the UI and wo
 
 ---
 
+<br/>
+
 # The UI
 
 ## Implementation
@@ -39,6 +41,36 @@ My responsiblities during the project has mainly been implementing the UI and wo
 <br/>
 
 ## Materials
+
+<figure class="float-right">
+  <a href="/assets/projectstuff/EndOfAbyss/CRTLoop.gif" target="_blank" rel="noopener noreferrer">
+    <img class="bracket" src="/assets/projectstuff/EndOfAbyss/CRTLoop.gif" alt="A loop of CRT">
+  </a>
+  <figcaption>CRT effect in the map menu. [click to see in full]</figcaption>
+</figure>
+
+One of my favourite things to work on is UI materials and in this project I have gotten the chance to improve my material-making skills quite a lot. Materials have been quite a central part in bringing our concepts to life. Everything from simple radial progression bars to the main CRT-like overlay has helped in giving the games UI the feeling we were striving for.
+
+<br/>
+
+<details markdown="1">
+<summary>A deep-dive into the pager material</summary>
+
+<video class="bracket" muted loop playsinline autoplay preload="metadata">
+  <source src="/assets/projectstuff/EndOfAbyss/Pager-web.mp4" type="video/mp4">
+</video>
+
+The pager material was an interesting challenge since it was made near the end of the project with a lot of **time constraints**. It also needed me to **sync it to the audio** that is being played when the NPCs are calling, something I hadn't done before.
+
+tbc...
+
+[Insert material nodes]
+
+[Insert relevant blueprint nodes]
+
+</details>
+
+
 <br/>
 
 ## Custom slate widgets
@@ -48,6 +80,8 @@ My responsiblities during the project has mainly been implementing the UI and wo
 <br/>
 
 ---
+
+<br/>
 
 # Other Stuff
 
