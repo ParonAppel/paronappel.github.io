@@ -3,7 +3,7 @@
     if (!canvas) return;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: false });
+    const gl = canvas.getContext('webgl', { alpha: true, premultipliedAlpha: true });
     if (!gl) return;   // no WebGL: the section simply has no static
 
     const PIXEL = 2;   // size of one static "pixel" in screen pixels
@@ -26,8 +26,8 @@
         uniform float t;
         uniform sampler2D tex; 
 
-        float hash(vec2 v) {
-            // return fract(sin(dot(v, vec2(12.9898, 78.233))) * 43758.5453);
+        float hash(vec2 p) {
+            // return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
             vec3 p3 = fract(vec3(p.xyx) * 0.1031);
             p3 += dot(p3, p3.yzx + 33.33);
              return fract((p3.x + p3.y) * p3.z);
@@ -64,18 +64,18 @@
             bar = barRepeat * bar;
 
             vec2 cell = floor(gl_FragCoord.xy);
-            float n = hash(cell + mod(floor(t * 20.0), 1024.0));
+            float n = hash(cell + mod(floor(t * 12.0), 1024.0));
 
-            bar = bar * n;
+            bar = bar * smoothstep( 0.0, 0.5, n) * 0.5;
     
             // overall noise
             float noise = clamp(texCol.r, 0.1, 0.5);
           
             vec3 color = vec3(0.54, 0.90, 0.99);
             float opacity = bar * sideFade * noise * 0.5 * topFade;
-            opacity = clamp(opacity, 0.0, 1.0)
+            opacity = clamp(opacity, 0.0, 1.0);
 
-            gl_FragColor = vec4( color, opacity);
+            gl_FragColor = vec4( color * opacity, opacity);
         }
     `;
 
@@ -83,6 +83,9 @@
         const s = gl.createShader(type);
         gl.shaderSource(s, src);
         gl.compileShader(s);
+        if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+            console.error('Shader compile error:\n' + gl.getShaderInfoLog(s));
+        }
         return s;
     };
 
@@ -90,6 +93,9 @@
     gl.attachShader(prog, compile(gl.VERTEX_SHADER, vert));
     gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, frag));
     gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
+        console.error('Link error:\n' + gl.getProgramInfoLog(prog));
+    }
     gl.useProgram(prog);
 
     const tex = gl.createTexture();
