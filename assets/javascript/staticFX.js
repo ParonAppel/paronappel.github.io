@@ -14,20 +14,30 @@
     `;
 
     const frag = `
+
+        #ifdef GL_FRAGMENT_PRECISION_HIGH
+            precision highp float;
+        #else
+            precision mediump float;
+        #endif
+
         precision mediump float;
         uniform vec2 res;
         uniform float t;
         uniform sampler2D tex; 
 
         float hash(vec2 v) {
-        return fract(sin(dot(v, vec2(12.9898, 78.233))) * 43758.5453);
+            // return fract(sin(dot(v, vec2(12.9898, 78.233))) * 43758.5453);
+            vec3 p3 = fract(vec3(p.xyx) * 0.1031);
+            p3 += dot(p3, p3.yzx + 33.33);
+             return fract((p3.x + p3.y) * p3.z);
         }
 
         void main() {
 
             vec2 uv = gl_FragCoord.xy / res;
             vec2 texUV = fract(uv * 2.0);
-            vec4 tex = texture2D(tex, texUV);
+            vec4 texCol = texture2D(tex, texUV);
 
             // Top fade
             float topFadeStrength = 6.0;
@@ -41,27 +51,29 @@
             sideFade = 1.0 - sideFade;
 
             // bars
-            float numberOfBars = res.y / 0.5;
-            float bar = sin(uv.y * numberOfBars);
+            // float numberOfBars = res.y / 1.0;
+            float bar = sin(gl_FragCoord.y * 3.14159);
 
             float barRepeatOpacity = 0.7;
-            float barRepeatNum = res.y / 5.0;
-            float barRepeat = 1.0 - abs(sin(uv.y * barRepeatNum));
+            // float barRepeatNum = res.y / 5.0;
+            // float barRepeat = 1.0 - abs(sin(uv.y * barRepeatNum));
+            float barRepeat = step(0.5, 1.0 - abs(sin(gl_FragCoord.y * 0.6283)));
             barRepeat = step(0.5, barRepeat);
             barRepeat = clamp(barRepeat, barRepeatOpacity, 1.0);
 
             bar = barRepeat * bar;
 
             vec2 cell = floor(gl_FragCoord.xy);
-            float n = hash(cell + floor(t * 20.0));
+            float n = hash(cell + mod(floor(t * 20.0), 1024.0));
 
             bar = bar * n;
     
             // overall noise
-            float noise = clamp(tex.r, 0.1, 0.5);
+            float noise = clamp(texCol.r, 0.1, 0.5);
           
             vec3 color = vec3(0.54, 0.90, 0.99);
             float opacity = bar * sideFade * noise * 0.5 * topFade;
+            opacity = clamp(opacity, 0.0, 1.0)
 
             gl_FragColor = vec4( color, opacity);
         }
