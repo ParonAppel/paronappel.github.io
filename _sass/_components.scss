@@ -120,9 +120,9 @@ article {
   }
 }
 
-
 .float-right {
   float: right;
+  clear: right;
   width: 40%;
   margin: 0 0 1rem 1.5rem; 
 }
@@ -130,4 +130,5 @@ article {
 @media (max-width: 700px) {
   .float-right { float: none; width: 100%; margin: 1rem 0; }
 }
+
 

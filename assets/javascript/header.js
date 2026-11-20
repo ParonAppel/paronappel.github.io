@@ -2,6 +2,23 @@
 const hideTopDistance = 100;
 var isMenuVisible = false;
 
+document.querySelectorAll('details').forEach(d => {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'accordion-close';
+  btn.textContent = 'Close';
+  d.appendChild(btn);
+});
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.accordion-close');
+  if (!btn) return;
+
+  const details = btn.closest('details');
+  details.open = false;
+  details.querySelector('summary').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
 function hideScroll(){
     const topButton = document.getElementById("topButton");
     const socialButtons = document.getElementById("socialMediaButtons");
@@ -73,9 +90,4 @@ function showMenu() {
 window.addEventListener("scroll", hideScroll);
 hideScroll();
 
-document.querySelectorAll('details').forEach(d => {
-  d.addEventListener('toggle', () => {
-    d.querySelectorAll('video[loop]').forEach(v => d.open ? v.play() : v.pause());
-  });
-});
 // showMenu();
