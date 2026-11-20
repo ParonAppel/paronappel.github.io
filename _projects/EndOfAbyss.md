@@ -43,8 +43,10 @@ My responsiblities during the project has mainly been implementing the UI and wo
 ## Materials
 
 <figure class="float-right">
-  <a href="/assets/projectstuff/EndOfAbyss/CRTLoop.gif" target="_blank" rel="noopener noreferrer">
-    <img class="bracket" src="/assets/projectstuff/EndOfAbyss/CRTLoop.gif" alt="A loop of CRT">
+  <a href="/assets/projectstuff/EndOfAbyss/CRT-web.mp4" target="_blank" rel="noopener noreferrer">
+    <video class="bracket" muted loop playsinline autoplay preload="metadata">
+  <source src="/assets/projectstuff/EndOfAbyss/CRT-web.mp4" type="video/mp4">
+</video>
   </a>
   <figcaption>CRT effect in the map menu. [click to see in full]</figcaption>
 </figure>

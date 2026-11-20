@@ -155,12 +155,3 @@ details {
   > :not(summary) { margin-left: 1rem; margin-right: 1rem; } 
 }
 
-.float-right {
-  float: right;
-  width: 40%;
-  margin: 0 0 1rem 1.5rem; 
-}
-
-@media (max-width: 700px) {
-  .float-right { float: none; width: 100%; margin: 1rem 0; }
-}
