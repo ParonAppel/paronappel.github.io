@@ -8,7 +8,7 @@ layout: default
     <p>All projects</p>
   </a>
 
-  <div id="projectSummary">
+  <div id="projectSummary" >
 
     <!-- Summary -->
     <div class="summary">
@@ -34,8 +34,8 @@ layout: default
         </ul>
 
       {% if page.link %}
-      <div class="headerButton" style="width: calc(15vh); margin: auto 0 0;">
-          <a class="headerButtonContent" href="{{page.link}}" target="_blank"> 	
+      <div class="headerButton linkButton" style="width: auto;">
+          <a class="headerButtonContent" href="{{page.link}}" target="_blank" rel="noopener noreferrer"> 	
              <p>{{ page.link_text }}</p>   
           </a>
       </div>  

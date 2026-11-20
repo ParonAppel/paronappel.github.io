@@ -79,6 +79,7 @@
   grid-template-columns: 1fr 1fr;
   padding: 2rem 0 2rem 0;
   border-bottom: var(--border_size) dashed var(--primary);
+  height: auto;
 
   ul {
     list-style: none;
@@ -101,7 +102,7 @@
 
 .banner {
   border: var(--border_size) dashed var(--primary);
-  width: 100%;
+  min-width: 0;
   aspect-ratio: 16 / 9;
 }
 
@@ -128,7 +129,34 @@ article {
 }
 
 @media (max-width: 700px) {
-  .float-right { float: none; width: 100%; margin: 1rem 0; }
+  .float-right {
+    float: none;
+    clear: both;
+    width: auto;              
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+  }
 }
+
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.linkButton {
+    padding: 4px;
+    width: auto;
+    margin: auto 0 0;
+}
+
+@media (max-width: 700px) {
+    .linkButton {
+       
+        margin: 2rem 0;
+
+    }
+}
+
 
 
