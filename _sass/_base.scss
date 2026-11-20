@@ -153,5 +153,27 @@ details {
   &[open] summary { border-bottom: calc(var(--border_size) / 2) dashed var(--primary); }
 
   > :not(summary) { margin-left: 1rem; margin-right: 1rem; } 
+
+  //anim stuff
+  interpolate-size: allow-keywords;
+
+  &::details-content {
+    block-size: 0;
+    overflow: clip;
+    opacity: 0;
+    transition:
+      block-size .3s ease,
+      opacity .3s ease,
+      content-visibility .3s allow-discrete;
+  }
+
+  &[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  details::details-content { transition: none; }
 }
 
