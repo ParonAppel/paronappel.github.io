@@ -16,7 +16,7 @@ duration: From Dec 2025, ongoing
 
 The goal of this plugin was mainly to create a **UI navigation** system that is more reliant on **Unreal's Enhanced Input** system. It is both derivative of Unreal's own UI plugin Common UI and the navigation system we used for **End of Abyss**. 
 
-During my time developing UI in UE5, both at school and professionaly, I have felt like Epic's solutions for controller/keyboard navigation in UI has been frustrating to work with. Both by hindering the fine controll over the focus, but also by having a very clunky way of handling input that is not pure focus navigation. The solution that Mattias started on and I later further developed on for End of Abyss had better support for handcontrollers, but instead was very limited when it came time to handle keyboard and mouse. So my goal is to take the best from both worlds and make it into a plugin I personally want to develop UI in. **Having good support for Blueprints is also very important for this**
+During my time developing UI in UE5, both at school and professionaly, I have felt like Epic's solutions for controller/keyboard navigation in UI has been frustrating to work with. Both by hindering the fine controll over the focus, but also by having a very clunky way of handling input that is not pure focus navigation. The solution that my lead started on and I later further developed on for End of Abyss had better support for handcontrollers, but instead was very limited when it came time to handle keyboard and mouse. So my goal is to take the best from both worlds and make it into a plugin I personally want to develop UI in. **Having good support for Blueprints is also very important for this**
 
 Aside from the navigation the goal is also to add quality of life features to the aesthetic side of UI development aswell. For example a variable color palette for UMG images.
 
@@ -136,7 +136,7 @@ void UUNCUIEnhancedInputNode::ExpandNode(FKismetCompilerContext& CompilerContext
 
 ## Slate Widgets
 
-As talked about in the previous section, having some predetermined navigation in certain panel widgets would be something nice so I have started by setting this up with vertical boxes. The main difference here is to add the Enhanced Input in and allow a bit more freedom. This of course would need to be fixed for all different kinds of panelwidgets, but I'm certain that once I have polished one of them the rest will be made quickly.
+As talked about in the previous section, having some predetermined navigation in certain panel widgets would be something nice so I have started by setting this up with vertical boxes. The main difference here is to add the Enhanced Input in and allow a bit more freedom. This of course would need to be fixed for all different kinds of panel widgets, but I'm certain that once I have polished one of them the rest will be made quickly.
 
 The important thing for me here is to not remove any of the already existing functionality panel widgets have. Such as allowing to add widgets to it in the UMG designer.
 
