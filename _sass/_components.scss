@@ -118,6 +118,7 @@ article {
     margin: 2rem 0;
     border: 0;
     border-bottom: var(--border_size) dashed var(--primary);
+    clear: both;
   }
 }
 
@@ -157,6 +158,90 @@ figure img {
 
     }
 }
+
+.frame {
+  border: var(--border_size) dashed color-mix(in srgb, var(--primary) 60%, transparent);
+}
+
+figcaption {
+  color: color-mix(in srgb, var(--primary) 60%, transparent);
+}
+
+.highlighter-rouge {
+  --code-bg: color-mix(in srgb, var(--background) 60%, transparent);
+  --code-fg: #d6e9ef;
+
+  display: flow-root;
+  position: relative;
+  margin: 1.5rem 0;
+  background: var(--code-bg);
+  border: 1px dashed color-mix(in srgb, var(--primary) 25%, transparent);
+  border-radius: 0px;
+  font-size: .9rem;
+
+  pre.highlight, pre {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;                       // long lines scroll instead of breaking the layout
+    background: transparent;
+    color: var(--code-fg);
+    font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+    line-height: 1.55;
+    tab-size: 4;
+    text-shadow: none;
+    font-variant-ligatures: none;           // remove or change if you like ligatures
+  }
+
+  // Language label in the top-right, like an editor tab
+  &::before {
+    position: absolute;
+    top: .4rem;
+    right: .75rem;
+    font-size: .7rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    opacity: .5;
+    pointer-events: none;
+  }
+  &.language-cpp::before        { content: "C++"; }
+  &.language-glsl::before       { content: "GLSL"; }
+  &.language-csharp::before     { content: "C#"; }
+  &.language-js::before         { content: "JS"; }
+  &.language-scss::before       { content: "SCSS"; }
+
+  // Syntax colors (VS Code Dark+ inspired)
+  .c, .c1, .cm, .cs { color: #6a9955; font-style: italic; }        // comments
+  .k, .kd, .kn, .kr, .kc, .kp { color: #569cd6; }                  // keywords
+  .kt { color: #4ec9b0; }                                          // types
+  .s, .s1, .s2, .sb, .sc { color: #ce9178; }                       // strings
+  .m, .mi, .mf, .mh, .mo { color: #b5cea8; }                       // numbers
+  .nf, .fm { color: #dcdcaa; }                                     // functions
+  .nc, .nn { color: #4ec9b0; }                                     // classes / namespaces
+  .nb, .bp { color: #9cdcfe; }                                     // builtins
+  .nv, .vi, .vg { color: #9cdcfe; }                                // variables
+  .o, .ow { color: #d4d4d4; }                                      // operators
+  .cp, .cpf { color: #c586c0; }                                    // preprocessor (#include, UCLASS...)
+
+  table { border-spacing: 0; width: 100%; }
+  .rouge-gutter { width: 1%; padding-right: .75rem; text-align: right; user-select: none; opacity: .35; }
+  .rouge-gutter pre { padding-right: 0; }
+  .rouge-code pre { padding-left: .75rem; }
+}
+
+.accordion-close {
+  position: relative;           
+  display: block;
+  margin: 1.5rem auto 1rem;        
+  padding: .5rem 1.25rem;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+
+  color: var(--background);
+  background: var(--primary);
+  border: var(--border_size) dashed var(--primary);
+}
+
 
 
 

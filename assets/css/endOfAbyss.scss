@@ -94,7 +94,6 @@ h2 {
     0 0 12px color-mix(in srgb, var(--primary) 60%, transparent);
 
   font-weight: 500;
-  clear: both;
 }
 
 strong {
@@ -102,7 +101,6 @@ strong {
 }
 
 figcaption {
-
   color: var(--darker);
   text-shadow: 0 0 6px color-mix(in srgb, var(--primary) 60%, transparent);
 }
@@ -116,10 +114,6 @@ hr {
 details {
 
   border: var(--border_size) none var(--primary);
-  margin: 1rem 0;
-
-  clear: both;
-  display: flow-root;
 
   summary {
     position: relative;
@@ -267,7 +261,7 @@ main {
 .project-content .accordion-close {
   position: relative;           
   display: block;
-  margin: 1.5rem auto 0;        
+  margin: 1.5rem auto 1rem;        
   padding: .5rem 1.25rem;
   font: inherit;
   font-weight: bold;

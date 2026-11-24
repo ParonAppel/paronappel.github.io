@@ -6,9 +6,14 @@ summary: Collection of snippets from game jams I have participated in.
 layout: portfoliopage
 icon: /assets/projectstuff/GameJams/Icon_Jammy.png
 
----
+banner: /assets/projectstuff/GameJams/Icon_Jammy.png
+platform: Itch & Hytale
+role: Various
+languages: C++, Blueprints, Java, GDScript
+link: https://itch.io/profile/paronappel
+link_text: To Itch.io Page
 
-# Summary
+---
 
 This is a collection of some of the things I have done through out various game jams. Feel free to check out my [**Itch.io page**](https://itch.io/profile/paronappel){:target="_blank" rel="noopener noreferrer"} to play some of these jams!
 

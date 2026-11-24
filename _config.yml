@@ -27,3 +27,7 @@ collections:
 defaults:
   - scope: { path: "", type: projects }
     values: { layout: default }
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true

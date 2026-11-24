@@ -18,12 +18,14 @@ h1
 {
     font-size: var(--font_size_title);
     color: var(--secondary);
+    clear: both;
 }
 
 h2 
 {
     font-size: var(--font_size_undertitle);
     color: var(--primary);
+    
 }
 
 strong 
@@ -135,6 +137,9 @@ details {
   border: var(--border_size) dashed var(--primary);
   margin: 1rem 0;
 
+  clear: both;
+  display: flow-root;
+
   summary {
     cursor: pointer;
     padding: .75rem 1rem;
@@ -158,6 +163,7 @@ details {
   interpolate-size: allow-keywords;
 
   &::details-content {
+    display: flow-root;
     block-size: 0;
     overflow: clip;
     opacity: 0;
@@ -177,3 +183,12 @@ details {
   details::details-content { transition: none; }
 }
 
+.project-content {
+
+      margin: 2rem auto 2rem;  
+
+}
+
+.staticFX {
+    display: none;
+}
