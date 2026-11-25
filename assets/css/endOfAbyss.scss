@@ -72,13 +72,13 @@
 clip-path: inset(0 -100vmax);
 
 // Elements
-font-family: "Saira",
-sans-serif;
+font-family: "Saira", sans-serif;
 
 p {
   color: var(--primary);
   text-shadow:
     0 0 6px color-mix(in srgb, var(--primary) 60%, transparent);
+  font-family: "Saira", sans-serif;
 }
 
 h1 {

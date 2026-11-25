@@ -12,5 +12,18 @@
   font-weight: 700;
   font-display: swap;
 }
+@font-face {
+  font-family: "Pixelklar Smooth";
+  src: url("/assets/fonts/PixelklarStraight-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pixelklar Smooth";
+  src: url("/assets/fonts/PixelklarStraight-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
 
 @import "variables", "base", "components", "scrollbar", "header";
