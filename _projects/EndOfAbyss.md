@@ -10,6 +10,7 @@ stylesheet: /assets/css/endOfAbyss.css
 video: https://www.youtube.com/watch?v=mTue29WoYHc
 platform: PC, PS5 & Xbox Series X|S
 role: Programming & UI
+engine: Unreal Engine 5.3 - 5.8
 languages: C++, Blueprints
 duration: From nov 2023 to current
 link: https://store.playstation.com/sv-se/product/HP1597-PPSA25717_00-ENDOFABYSS000000

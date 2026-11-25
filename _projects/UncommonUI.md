@@ -7,6 +7,8 @@ layout: portfoliopage
 icon: /assets/projectstuff/UncommonUI/Icon_UncommonUI.png
 
 languages: C++, Blueprints
+role: Solo developer
+engine: Unreal Engine 5.6
 duration: From Dec 2025, ongoing
 
 ---
@@ -16,9 +18,9 @@ duration: From Dec 2025, ongoing
 
 The goal of this plugin was mainly to create a **UI navigation** system that is more reliant on **Unreal's Enhanced Input** system. It is both derivative of Unreal's own UI plugin Common UI and the navigation system we used for **End of Abyss**. 
 
-During my time developing UI in UE5, both at school and professionaly, I have felt like Epic's solutions for controller/keyboard navigation in UI has been frustrating to work with. Both by hindering the fine controll over the focus, but also by having a very clunky way of handling input that is not pure focus navigation. The solution that my lead started on and I later further developed on for End of Abyss had better support for handcontrollers, but instead was very limited when it came time to handle keyboard and mouse. So my goal is to take the best from both worlds and make it into a plugin I personally want to develop UI in. **Having good support for Blueprints is also very important for this**
+During my time developing UI in UE5, both at school and professionaly, I have felt like Epic's solutions for controller/keyboard navigation in UI has been frustrating to work with. Both by hindering the fine control over the focus, but also by having a very clunky way of handling input that is not pure focus navigation. The solution that my lead started on and I later further developed on for End of Abyss had better support for controllers, but instead was very limited when it came time to handle keyboard and mouse. So my goal is to take the best from both worlds and make it into a plugin I personally want to develop UI in. **Having good support for Blueprints is also very important for this**
 
-Aside from the navigation the goal is also to add quality of life features to the aesthetic side of UI development aswell. For example a variable color palette for UMG images.
+Aside from the navigation the goal is also to add quality of life features to the aesthetic side of UI development as well. For example a variable color palette for UMG images.
 
 **This plugin is still under development.**
 
@@ -59,7 +61,7 @@ The way I achieved this in the end was to create a **custom K2 node**. In the gr
 Testing it out it immediately improved upon the freedom of input I was going for. Whilst this could've been the entirety of the plugin and I would've been quite happy, I also realised for some standard elements, like vertical boxes, having to do a manual setup each time would get annoying.
 
 <details markdown="1">
-<summary>Exapnd Node function</summary>
+<summary>Expand Node function</summary>
 
 ```cpp
 void UUNCUIEnhancedInputNode::ExpandNode(FKismetCompilerContext& CompilerContext, UEdGraph* SourceGraph)

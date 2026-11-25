@@ -27,6 +27,11 @@ layout: default
         <li><strong>MY ROLE:</strong> {{ page.role }}</li>
         {% endif %}
 
+        {% if page.engine %}
+        <li><strong>ENGINE:</strong> {{ page.engine }}</li>
+        {% endif %}
+
+
         {% if page.duration %}
         <li><strong>DURATION:</strong> {{ page.duration }}</li>
         {% endif %}
