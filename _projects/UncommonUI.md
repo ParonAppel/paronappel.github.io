@@ -140,9 +140,11 @@ As talked about in the previous section, having some predetermined navigation in
 
 The important thing for me here is to not remove any of the already existing functionality panel widgets have. Such as allowing to add widgets to it in the UMG designer.
 
+<!-- 
+Note to self:
 [insert image of widget tree]
 [insert image of widget settings]
-[insert gif of navigation]
+[insert gif of navigation] -->
 
 <br/>
 
