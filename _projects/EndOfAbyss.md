@@ -160,7 +160,6 @@ The frequency values are then added back in to create the final result.
 
 ## Tools
 
-One of the most useful things I have gotten to learn during this project 
 
 <br/>
 
