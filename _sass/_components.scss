@@ -242,6 +242,16 @@ figcaption {
   border: var(--border_size) dashed var(--background);
 }
 
+.twentyWidth {
+  width: 20%;
+}
+
+@media (max-width: 700px) {
+    .twentyWidth {
+      width: 100%;
+    }
+}
+
 
 
 

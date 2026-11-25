@@ -96,6 +96,14 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  color: var(--secondary);
+  text-shadow:
+    0 0 4px color-mix(in srgb, var(--secondary) 60%, transparent),
+    0 0 12px color-mix(in srgb, var(--primary) 60%, transparent);
+  font-weight: 500;
+}
+
 strong {
   font-weight: 600;
 }

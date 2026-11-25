@@ -32,9 +32,7 @@ My responsiblities during the project has mainly been implementing the UI and wo
 
 <br/>
 
-# The UI
-
-## Implementation
+# The UI 
 
 <br/>
 
@@ -148,7 +146,93 @@ The frequency values are then added back in to create the final result.
 <br/>
 
 ## Custom slate widgets
+
+### Controller hint
+
+<video class="bracket" muted loop playsinline autoplay preload="metadata">
+  <source src="/assets/projectstuff/EndOfAbyss/InputHints-web.mp4" type="video/mp4">
+</video>
+
 <br/>
+
+<figure class="float-right twentyWidth">
+    <img class="bracket" preload="metadata" src="/assets/projectstuff/EndOfAbyss/TEX_Gamepad_Buttons_Xbox.png">
+  <figcaption> Xbox Texture Atlas </figcaption>
+</figure>
+
+One of our more important widgets I had to create trough slate is our controller/input hint widgets. This widget take a **UInputAction** and uses a **texture atlas** to display the corresponding button. It also needed to be able to update in runtime depending on which controller is being in use or if the player is playing on keyboard and mouse.
+
+<details markdown="1">
+<summary> UWidget Setup Code </summary>
+
+```cpp
+TSharedRef<SWidget> USCInputDisplay::RebuildWidget()
+{
+	FSlateBrush* inSlateBrush = &SlateBrush;
+	FString keyArgs;
+	FSlateFontInfo keyFont;
+	if (InputAction.IsValid())
+	{
+		USCUIManager* uiManager = USCGlobals::GetSCUIManager(this);
+#if WITH_EDITOR
+		if (!uiManager)
+		{
+			uiManager = USCUIManager::GetDefaultManager();
+		}
+#endif
+		if (uiManager)
+		{
+			// If in game bind to update image
+			if(!IsDesignTime()) 
+			{
+				uiManager->OnUpdateInputDevice.AddUniqueDynamic(this, &USCInputDisplay::OnInputDeviceUpdated);
+			}
+
+			// Fetch the FKey from the UInputAction
+			FKey key = uiManager->GetFKeyFromActionName(FName(InputAction.GetAssetName()));
+
+			if (!key.GetFName().IsNone())
+			{
+				// Gets the uv associated with the key and if the key need any args 
+				// for example if the key is the "A" keyboard button this will return an A.
+				FBox2D uv;			
+				if (uiManager->GetGamepadButtonsUVByKey(key, uv, keyArgs))
+				{
+					// Fetch the texture atlas associated with current input
+					if (uiManager->GetGamepadButtonsTexture())
+					{
+						inSlateBrush->SetResourceObject(uiManager->GetGamepadButtonsTexture());
+						inSlateBrush->SetImageSize(Size);
+						inSlateBrush->SetUVRegion(uv);
+					}
+				}
+			}
+
+			keyFont = uiManager->KeyFont;
+		}
+	}
+
+	// Build the actual widget
+	MyInputDisplay = SNew(SSCInputDisplay)
+		.Brush(inSlateBrush)
+		.Height(Size.X)
+		.Width(Size.Y)
+		.Stretch(Stretch)
+		.KeyArgs(keyArgs)
+		.KeyFont(keyFont);
+
+	return MyInputDisplay.ToSharedRef();
+}
+```
+</details>
+
+The first step in this process was to get the **FKey** currently associated with the UInputAction. Since we allow for rebinding keys in this game
+
+To be continued...
+
+
+<br/>
+
 
 ## Custom UI navigation system
 <br/>

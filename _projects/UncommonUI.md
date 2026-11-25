@@ -32,6 +32,7 @@ Under here I will discuss some of the work I have made to improve upon the UI na
 
 My UI manager subsystem contains my favourite lines of code however:
 <figcaption> Nuking the native navigation </figcaption>
+
 ```cpp
 	if (ensure(FSlateApplication::IsInitialized()))
 	{
@@ -49,7 +50,7 @@ My UI manager subsystem contains my favourite lines of code however:
 
 ## The Enhanced Input K2 nodes
 
-<figure class="float-right" style="width:20%">
+<figure class="float-right twentyWidth" >
      <img class="frame" preload="metadata" src="/assets/projectstuff/UncommonUI/UIInputNode.png">
     <figcaption> UI Input Action Node</figcaption>
 </figure>
