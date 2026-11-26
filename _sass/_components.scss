@@ -252,6 +252,125 @@ figcaption {
     }
 }
 
+#page-toc {
+  position: fixed;
+  z-index: 50;
+  font-family: "Pixelklar Smooth", monospace;
+
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin: .35rem 0; }
+  
+  .toc-sub { 
+    padding-left: 1rem; 
+    font-size: var(--font_size_details); 
+    color: color-mix(in srgb, var(--primary) 50%, var(--background));
+  }
+
+  a {
+    text-decoration: none;
+    transition: color .15s;
+    display: block;
+    padding: .15rem 0 .15rem .6rem;
+    border-left: 2px solid transparent;
+    &:hover { color: var(--secondary); }  
+    &.active { border-left-color: var(--secondary); }
+  }
+
+  .toc-title {
+    margin: 0 0 .5rem;
+    font-weight: 600;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: var(--font_size_body);
+  }
+
+  // Wide screens: side panel in the left margin 
+  @media (min-width: 1400px) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: var(--toc_width);   
+    padding: 7rem 1.5rem 2rem; 
+    overflow-y: auto;
+    scrollbar-width: thin;
+    z-index: 1;                                           
+
+    background: color-mix(in srgb, var(--background) 80%, black);
+    border-right: var(--border_size) solid var(--primary);                
+    // box-shadow: 4px 0 24px color-mix(in srgb, var(--background) 90%, black);  
+
+    .toc-toggle { display: none; }
+
+    outline: var(--border_size) dashed var(--primary);
+    outline-offset: var(--border_size);
+  }
+
+  // Smaller screens: burger button + pop-up panel
+  @media (max-width: 1399px) {
+    bottom: 1rem;
+    left: 1rem;
+
+    .toc-title { display: none; }
+
+    .toc-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      height: var(--iconbox_size);
+      width: var(--iconbox_size);;
+      padding: 0 .8rem;
+      cursor: pointer;
+      background: var(--primary);
+      border: var(--border_size) dashed var(--background);
+
+      box-shadow: 6px 6px var(--background);
+
+      span {
+        display: block;
+        height: 3px;
+        background: var(--background);
+        transition: transform .2s, opacity .2s;
+      }
+
+      &:hover { 
+        transform: scale(1.1);
+        box-shadow: 8px 8px var(--background);
+        transition: all 200ms ease-in-out;
+      }
+    }
+
+    &.open .toc-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    &.open .toc-toggle span:nth-child(2) { opacity: 0; }
+    &.open .toc-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    #toc-list {
+      display: none;
+      position: absolute;
+      left: 0;
+      bottom: 3.75rem;
+      width: min(80vw, 20rem);
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 1rem 1.25rem;
+      background: color-mix(in srgb, var(--background) 80%, black);
+      border: var(--border_size) solid var(--primary);
 
 
+      outline: 2px dashed var(--primary);
+      outline-offset: 2px;
+    }
 
+    &.open #toc-list { display: block; }
+  }
+}
+
+@media (min-width: 1400px) {
+  body:has(#page-toc) {
+    padding-left: var(--toc_width);
+  }
+}
+
+h2, h3 { scroll-margin-top: 1.5rem; }

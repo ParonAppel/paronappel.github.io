@@ -68,6 +68,11 @@ layout: default
     {% endif %}
   </div>
 
+{% unless page.toc == false %}
+  <script src="{{ '/assets/javascript/tableOfContent.js' | relative_url }}" defer></script>
+  <nav id="page-toc" aria-label="Contents"></nav>
+{% endunless %}
+
   <div class="project-content">
     <canvas class="staticFX" aria-hidden="true" data-texture="{{ '/assets/textures/globalNoise.png' | relative_url }}"></canvas>
     {{ content }}
