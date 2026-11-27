@@ -309,8 +309,8 @@ figcaption {
 
   // Smaller screens: burger button + pop-up panel
   @media (max-width: 1399px) {
-    bottom: 1rem;
-    left: 1rem;
+    bottom: var(--header_border_distance);
+    left: var(--header_border_distance);
 
     .toc-title { display: none; }
 
@@ -325,7 +325,6 @@ figcaption {
       cursor: pointer;
       background: var(--primary);
       border: var(--border_size) dashed var(--background);
-
       box-shadow: 6px 6px var(--background);
 
       span {
@@ -350,7 +349,7 @@ figcaption {
       display: none;
       position: absolute;
       left: 0;
-      bottom: 3.75rem;
+      bottom: calc(var(--iconbox_size) + var(--header_border_distance));
       width: min(80vw, 20rem);
       max-height: 60vh;
       overflow-y: auto;

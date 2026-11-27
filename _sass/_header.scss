@@ -10,8 +10,8 @@ header {
 .headerButton {
 
     padding: 0px;
-    margin-left: 1vw;
-    margin-top: 1vh;
+    // margin-left: 1vw;
+    // margin-top: 1vh;
 
     height: var(--iconbox_size);
     width: var(--iconbox_size);
@@ -64,8 +64,9 @@ header {
 
 #topButton {
     position: fixed;
-    bottom: 5vh;
-    right: 2vw;
+    bottom: var(--header_border_distance);
+    right: var(--header_border_distance);
+    
 }
 
 #socialMediaButtons {
@@ -73,12 +74,14 @@ header {
     display: flex;
     flex-direction: row;
     position: fixed;
-    right: 2vw;
-    top: 0;
+    right: var(--header_border_distance);
+    top: var(--header_border_distance);
+    gap: var(--header_border_distance);
 }
 
 #menu {
     position: fixed;
+    margin: var(--header_border_distance);
     z-index: 99;
 }
 
